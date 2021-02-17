@@ -1,3 +1,9 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "terminal.integrated.automationShell.windows": "",
+    "json.schemas": [
+    
+    ],
+    "liveServer.settings.useLocalIp": true,
+    "liveServer.settings.useWebExt": true
 }
