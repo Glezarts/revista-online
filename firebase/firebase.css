@@ -1,0 +1,27 @@
+body{
+  margin: auto;
+  max-width: 90vw; 
+  font-family:'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+}
+.contenidor{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.contCheckbox{
+  column-count: 4;
+  column-gap: 50px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.contenidorCheckbox{
+  margin:10px;
+  display: block;
+}

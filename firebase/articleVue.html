@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VUE component</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <style>
+    .article{
+      background-color: bisque;
+      width: 800px;
+      height: auto;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Article reutilitzable fet amb VUE</h1>
+  
+  <div id="articles">
+    <llista-articles v-for="el of articles" v-bind:key="el.id" v-bind:titol="el.titol" v-bind:contingut="el.contingut"></llista-articles>
+  </ul>
+  
+  <script>
+    Vue.component("llista-articles",{
+      props: ["titol","contingut"],
+      template: `<div class= "article"> <h2> {{titol}} </h2> <p>{{contingut}} </p></div>`
+    });
+    
+    var articles = new Vue ({
+      el: "#articles",
+      data:{
+        articles: [
+        {
+          titol: "Titol 1",
+          contingut: "contingut 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, id voluptas quaerat magnam libero voluptate minima, natus corporis, sint nostrum assumenda porro sed deserunt odit quae! A tenetur assumenda dicta corporis porro nesciunt harum totam, illum repellendus non reprehenderit cupiditate laboriosam voluptates error dolor, praesentium recusandae minima impedit eaque asperiores. Aut, accusantium qui ut, adipisci numquam libero quaerat totam cupiditate, doloribus voluptate inventore. Obcaecati id, fugiat tempore recusandae aperiam dolor magnam ab at accusamus beatae. Molestiae obcaecati quae, quod suscipit repudiandae veritatis officia quisquam ducimus nisi nihil non fuga, necessitatibus distinctio quos hic commodi illum enim magnam inventore nulla velit?"
+        },
+        {
+          titol: "Titol 2",
+          contingut: "contingut 2222222222 Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, id voluptas quaerat magnam libero voluptate minima, natus corporis, sint nostrum assumenda porro sed deserunt odit quae! A tenetur assumenda dicta corporis porro nesciunt harum totam, illum repellendus non reprehenderit cupiditate laboriosam voluptates error dolor, praesentium recusandae minima impedit eaque asperiores. Aut, accusantium qui ut, adipisci numquam libero quaerat totam cupiditate, doloribus voluptate inventore. Obcaecati id, fugiat tempore recusandae aperiam dolor magnam ab at accusamus beatae. Molestiae obcaecati quae, quod suscipit repudiandae veritatis officia quisquam ducimus nisi nihil non fuga, necessitatibus distinctio quos hic commodi illum enim magnam inventore nulla velit?"
+        },
+        {
+          titol: "Titol 3",
+          contingut: "cisdfdsft?"
+        }
+        ]
+      }
+    })
+    
+    // fet aqui i el res guarder en app.articles 
+  </script>
+  
+</body>
+</html>
