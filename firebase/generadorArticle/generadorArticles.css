@@ -29,7 +29,7 @@ h1,p{
   border:none;
   padding: 10px 20px ;
   background-color: #9ba5dd;
- margin: 20px auto 100px auto;
+  margin: 20px auto 100px auto;
 }
 
 body{
@@ -41,9 +41,7 @@ body{
   flex-direction: column;
 }
 
-header{
 
-}
 .contenidor{
   display: flex;
   flex-direction: column;
@@ -54,27 +52,27 @@ header{
   font-style: italic;
 }
 
-.divCheckbox{
-  column-count: 4;
-  column-gap: 50px;
-  /* display: flex;
-  flex-direction: column; */
+#contCB{
+  column-count: 6;
+  column-gap: 50px; 
+
 }
-.labelCheckbox{
-  margin:10px;
+.CB{
   display: block;
 }
 
-.divImatge{
+.contImatge{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   min-height: 200px;
 }
-#uploader{
-  -webkit-appearance: none;
-  appearance: none;
-  width: 50%;
-  margin-bottom: 10px;
+#feedback{
+  display: none;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  background-color: green;
+  padding: 10px;
 }

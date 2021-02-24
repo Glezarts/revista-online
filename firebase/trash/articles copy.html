@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles</title>
+</head>
+<link rel="stylesheet" href="generadorArticles.css">
+<body>
+  <header>
+    <h1>Escriviu aquí els vostres articles</h1>
+    <p>El contingut que escriviu en aquest document s'actualitzarà en la web. 
+    </p>
+  </header>
+  
+  <!--** Falta fer una llegenda on ells puguin fer una mica d'estil (cursiva, negreta i 2 mides de text. I llista. ) -->
+  
+  <div class="contenidor">
+    <label for="title"><span class="italic">Escriviu aquí la capçalera o títol de l'article</span></label>
+    <input type="text" name="titol" id="titol" placeholder="títol de l'article">
+  </div>
+  
+  <div class="contenidor">
+    <label for="contingut"><span class="italic">Escriviu aquí el contingut de l'article</span></label>
+    <textarea name="contingut" id="contingut" cols="150" rows="30">...contingut...</textarea>
+  </div>
+  
+  <p><span class="italic">Trieu la categoria de l'article // secció a la qual correspon. Pot ser més de una.</span> </p>
+  <div id="contCB">
+    
+    <label  class="labelCheckbox">General
+      <input type="checkbox" class="cb" checked="checked">
+    </label>
+    <label  class="labelCheckbox">Albania
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Alemanya
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Armènia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Austràlia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Àustria
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Azerbaijan
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Bielorússia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Bèlgica
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Bòsnia i Hercegovina
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Bulgària
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Croàcia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Dinamarca
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Estònia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Eslovàquia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Eslovènia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Espanya
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Finlàndia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">França
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Geòrgia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Grècia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Hongria
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Islàndia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Irlanda
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Israel
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Itàlia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Letònia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Lithuania
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Malta
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Moldàvia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Montenegro
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Països Baixos
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Macedònia del Nord
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Noruega
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Polònia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Portugal
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Regne Unit
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">República Txeca
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Romania
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Russia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">San Marino
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Sèrbia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Suècia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Suïssa
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Ucraïna
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Turquia
+      <input type="checkbox" class="cb">
+    </label>
+    <label  class="labelCheckbox">Xipre
+      <input type="checkbox" class="cb">
+    </label>
+  </div>
+  
+  <div class="divImatge">
+    <input type="file" value="upload" id="fileButton" />
+  </div>
+  
+  <button id="btn" >Send</button>
+  
+  <!-- <script src="firebase.js"></script> -->
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  
+  <!-- Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+    
+    
+    <script>     
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA5-G20uoAdIfb74mdV-pz4DMuZNLoF1kE",
+        authDomain: "eurovisiu.firebaseapp.com",
+        databaseURL: "https://eurovisiu-default-rtdb.firebaseio.com",
+        projectId: "eurovisiu",
+        storageBucket: "eurovisiu.appspot.com",
+        messagingSenderId: "477526781890",
+        appId: "1:477526781890:web:5a04cbca39bd25acbeb05b"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      
+      // Get elements
+      var fileButton = document.querySelector("#fileButton");
+      var send = document.querySelector("#btn");
+      const URL = "https://eurovisiu-default-rtdb.firebaseio.com/articles";
+      let ti = document.querySelector("#titol");
+      let cont = document.querySelector("#contingut");
+      let cb = document.querySelectorAll(".cb");
+      
+      // Listen for file selection
+      // fileButton.addEventListener("change", function(e) {
+        send.addEventListener("click", function(e) {
+          
+          // Get file
+          // var file = e.target.files[0];
+          var file = fileButton.files[0];
+          var fileName = new Date().getTime()  + file.name; 
+          console.log('funciona');
+          
+          // Create a storage ref
+          var storageRef = firebase.storage().ref('articles/' + fileName);
+          // Update file
+          var task = storageRef.put(file);
+          
+          
+          
+          // DATABASE
+          var databaseRef = firebase.database().ref('articles/');
+          ti = ti.value; 
+          cont = cont.value;
+          var objecte = getValues();
+          objecte.img = fileName; 
+          databaseRef.push(objecte); 
+          
+
+          // Function para obtener los valores introducidos por el usuario
+          function getValues(){
+            let sec= [];
+            for (var checkbox of cb) {  
+              if (checkbox.checked){  
+                sec.push(checkbox.closest("label").innerText);
+              }  
+            }
+            return {titol: ti, contingut: cont, seccions: sec};
+          }
+          
+          
+          
+          
+          // Update progress bar
+          // task.on('state_changed', 
+          
+          //   function progress(snapshot) {
+            //     var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            //     uploader.value = percentage;
+            //   },
+            //   function error(err) {
+              
+              //   },
+              //   function complete() {
+                
+                //   }
+                
+                // );
+              });
+              
+              
+            </script>            
+          </body>
+          </html>

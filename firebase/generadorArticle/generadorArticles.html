@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="generadorArticles.css">
+  <title>Generador articles</title>
+</head>
+
+<body>
+  <div class="content">
+    <header>
+      <div class="cab-fondo"><img src="./fondo-def.jpg" alt=""></div>
+      <a class= "brand" href="./index.html"><img src="./blanco.png" width="300px" alt=""></a>
+      <h1>Escriviu aquí els vostres articles</h1>
+      <p>El contingut que escriviu en aquest document s'actualitzarà en la web. 
+      </p>
+    </header>
+    
+    <!--** Falta fer una llegenda on ells puguin fer una mica d'estil (cursiva, negreta i 2 mides de text. I llista. ) -->
+    
+    <div class="contenidor">
+      <label for="title"><span class="italic">Escriviu aquí el títol de l'article</span></label>
+      <input type="text" name="titol" id="titol" placeholder="títol de l'article">
+    </div>
+
+    <div class="contenidor">
+      <label for="subtitol"><span class="italic">Escriviu aquí el subtítol de l'article</span></label>
+      <input type="text" name="subtitol" id="subtitol" placeholder="Subtítol de l'article">
+    </div>
+    <div class="contenidor">
+      <label for="autor"><span class="italic">Nom de l'autor</span></label>
+      <input type="text" name="autor" id="autor" placeholder="Autor de l'article">
+    </div>
+    <div class="contenidor">
+      <label for="contingut"><span class="italic">Contingut de l'article</span></label>
+      <textarea name="contingut" id="contingut" cols="150" rows="30"></textarea>
+    </div>
+    
+    <div class="contenidor">
+      <p><span class="italic">Trieu les categories // seccions de l'article.</span> </p>
+      <div id="contCB"></div>
+    </div>
+    
+    <div class="contImatge">
+      <p><span class="italic">Afegiu una imatge (100 x 100 px)</span> </p>
+      <input type="file" value="upload" id="fileButton" />
+    </div>
+    
+    <h3 id="feedback">Article enviat</h3>
+    <button id="btn">Send</button>
+  </div>
+  
+    
+  <!-- Firebase importing -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script> 
+  <script src="firebase.js"></script>
+  <script src="checkbox.js"></script>
+
+</body>
+</html>
+
+
+
+
+
