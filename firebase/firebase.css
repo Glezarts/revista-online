@@ -1,9 +1,48 @@
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cab-fondo img{
+  width: 1200px;
+  margin-top: 0px;
+  height: 200px;
+}
+
+.brand img{
+  position: absolute;
+  top: 0px;
+  left: 42vw;
+}
+h1,p{
+  text-align: center;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:auto;
+  background-color:white;
+  padding: 20px 50px;
+}
+
+#btn{
+  width: 200px;
+  border:none;
+  padding: 10px 20px ;
+  background-color: #9ba5dd;
+ margin: 20px auto 100px auto;
+}
+
 body{
+  background-color: #08103E;
   margin: auto;
-  max-width: 90vw; 
+  max-width: 80vw; 
   font-family:'Courier New', Courier, monospace;
   display: flex;
   flex-direction: column;
+}
+
+header{
+
 }
 .contenidor{
   display: flex;
@@ -28,7 +67,7 @@ body{
 
 .divImatge{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   min-height: 200px;

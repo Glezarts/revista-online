@@ -5,33 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Articles</title>
-  <style>
-    *{
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    body{
-background-color: #08103E;
-    }
-    h1,p{
-      text-align: center;
-    }
-    .content{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin:auto;
-      background-color:white;
-      padding: 20px 50px;
-    }
-    .contenidor{
-      width: 1000px;
-    }
-    .contCheckbox{
-      width: 1000px;
- 
-    }
-
-  </style>
+  <link rel="stylesheet" href="./">
 </head>
 <link rel="stylesheet" href="firebase.css">
 <body>
@@ -41,13 +15,23 @@ background-color: #08103E;
 
   <div class="content">
     <header>
+      <div class="cab-fondo"><img src="./fondo-def.jpg" alt=""></div>
+      <a class= "brand" href="./index.html"><img src="./blanco.png" width="300px" alt=""></a>
       <h1>Escriviu aquí els vostres articles</h1>
       <p>El contingut que escriviu en aquest document s'actualitzarà en la web. 
       </p>
       </header>
   	<div class="contenidor">
   	  <label for="title"><span class="italic">Escriviu aquí la capçalera o títol de l'article</span></label>
-  	  <input type="text" name="titol" id="titol" placeholder="títol de l'article">
+  	  <input type="text" name="titol" id="titol" placeholder="Títol de l'article">
+  	</div>
+    <div class="contenidor">
+  	  <label for="subtitle"><span class="italic">Escriviu aquí el subtítol de l'article</span></label>
+  	  <input type="text" name="subtitol" id="subtitol" placeholder="Subtítol de l'article">
+  	</div>
+    <div class="contenidor">
+  	  <label for="autor"><span class="italic">Nom de l'autor</span></label>
+  	  <input type="text" name="autor" id="autor" placeholder="Autor de l'article">
   	</div>
   	<div class="contenidor">
   	  <label for="contingut"><span class="italic">Escriviu aquí el contingut de l'article</span></label>
@@ -203,14 +187,15 @@ background-color: #08103E;
   	    <input type="checkbox">
   	  </label>
   	</div>
+    <div class="divImatge">
+      <progess value="0" max="100" id="uploader">0%</progess>
+      <input type="file" value="upload" id="fileButton"/>
+    </div>
+    
+    <button id="btn" >Send</button>
   </div>
   
-  <div class="divImatge">
-    <progess value="0" max="100" id="uploader">0%</progess>
-    <input type="file" value="upload" id="fileButton" />
-  </div>
-  
-  <button id="btn" >Send</button>
+
   
   <!-- <script src="firebase.js"></script> -->
   
