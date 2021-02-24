@@ -2,6 +2,12 @@ body{
     background-color: lightsteelblue;
 
 }
+.contenido-paginas{
+    display: none;
+ }
+ #project-page{
+     display: none;
+ }
 .contenido-pag{
     display: flex;
     justify-content: space-between;
