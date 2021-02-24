@@ -15,13 +15,27 @@ body{
   font-style: italic;
 }
 
-.contCheckbox{
+.divCheckbox{
   column-count: 4;
   column-gap: 50px;
   /* display: flex;
   flex-direction: column; */
 }
-.contenidorCheckbox{
+.labelCheckbox{
   margin:10px;
   display: block;
+}
+
+.divImatge{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+#uploader{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50%;
+  margin-bottom: 10px;
 }

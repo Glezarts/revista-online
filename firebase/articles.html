@@ -204,5 +204,115 @@ background-color: #08103E;
   	  </label>
   	</div>
   </div>
-</body>
-</html>
+  
+  <div class="divImatge">
+    <progess value="0" max="100" id="uploader">0%</progess>
+    <input type="file" value="upload" id="fileButton" />
+  </div>
+  
+  <button id="btn" >Send</button>
+  
+  <!-- <script src="firebase.js"></script> -->
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  
+  
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script>
+
+          const URL = "https://eurovisiu-default-rtdb.firebaseio.com/articles";
+          
+          
+          
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA5-G20uoAdIfb74mdV-pz4DMuZNLoF1kE",
+        authDomain: "eurovisiu.firebaseapp.com",
+        databaseURL: "https://eurovisiu-default-rtdb.firebaseio.com",
+        projectId: "eurovisiu",
+        storageBucket: "eurovisiu.appspot.com",
+        messagingSenderId: "477526781890",
+        appId: "1:477526781890:web:5a04cbca39bd25acbeb05b"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      
+      // Get elements
+      var uploader = document.querySelector("#uploader");
+      var fileButton = document.querySelector("#fileButton");
+      var send = document.querySelector("#btn");
+      
+      // Listen for file selection
+      // fileButton.addEventListener("change", function(e) {
+        send.addEventListener("click", function(e) {
+          // Get values
+          let ti = document.querySelector("#titol").value;
+          let cont = document.querySelector("#contingut").value;
+          let cb = document.querySelectorAll(".cb");
+
+          // Get file
+          // var file = e.target.files[0];
+          var file = fileButton.files[0];
+          var fileName = new Date().getTime()  + file.name; 
+          console.log('funciona');
+          
+          // Create a storage ref
+          var storageRef = firebase.storage().ref('articles/' + fileName);
+          // Update file
+          var task = storageRef.put(file);
+          
+          
+
+          // DATABASE
+          var databaseRef = firebase.database().ref('articles/');
+          var objecte = getValues();
+          objecte.img = fileName; 
+          databaseRef.push(objecte); 
+
+          
+          
+          
+          // Function para obtener los valores introducidos por el usuario
+          function getValues(){
+            let sec= [];
+            for (var checkbox of cb) {  
+              if (checkbox.checked){  
+                sec.push(checkbox.closest("label").innerText);
+              }  
+            }
+            return {titol: ti, contingut: cont, seccions: sec};
+          }
+          
+          
+          
+          
+          // Update progress bar
+          // task.on('state_changed', 
+          
+          //   function progress(snapshot) {
+            //     var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            //     uploader.value = percentage;
+            //   },
+            //   function error(err) {
+              
+              //   },
+              //   function complete() {
+                
+                //   }
+                
+                // );
+              });
+              
+              
+            </script>
+            
+            
+            
+          </body>
+          </html>
