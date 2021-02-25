@@ -28,7 +28,6 @@ async function load() {
     var url = await firebase.storage().ref('articles/' + app.articles[article].imatge).getDownloadURL()
       app.articles[article].imatge = url;
       console.log(app.articles[article].imatge);
-      app.articles[article].contingut = interpretarMarkdown(app.articles[article].contingut);
     }
     app.fetchDone = true;
   }
