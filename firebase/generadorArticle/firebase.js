@@ -37,8 +37,8 @@ send.addEventListener("click", function() {
       sec.push(checkbox.closest("label").innerText);
     }  
   }
-  if(file)var objecte =  {titol: ti.value, subtitol: sub.value, contingut: cont.value, seccions: sec, autor: aut.value, imatge: fileName}
-  else var objecte = {titol: ti.value, subtitol: sub.value, contingut: cont.value, seccions: sec, autor: aut.value, imatge: null};
+  if(file)var objecte =  {titol: ti.value, subtitol: sub.value, contingut: cont.innerText, seccions: sec, autor: aut.value, imatge: fileName}
+  else var objecte = {titol: ti.value, subtitol: sub.value, contingut: cont.innerText, seccions: sec, autor: aut.value, imatge: null};
   
   // send info to database and storage
   if(file) firebase.storage().ref('articles/' + fileName).put(file);
