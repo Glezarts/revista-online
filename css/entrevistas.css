@@ -1,0 +1,24 @@
+.pageentrevistas{
+  
+    width: 100%;
+
+}
+.cont-entrevistas{
+display: flex;
+justify-content: space-between;
+margin: 0px 60px;
+}
+
+.article-entrevistas{
+width: 900px;
+}
+
+
+.article-entrevistas p{
+margin: 20px 0px;
+line-height: 25px;
+}
+.pageentrevistas  iframe{
+    height: 400px;
+    margin:0;
+}

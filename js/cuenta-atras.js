@@ -20,50 +20,21 @@ const getRemainTime = deadline => {
 		
 		const timeUpdate = setInterval( () =>{
 			let t = getRemainTime(deadline);
-			el.innerHTML = `<div style="display:flex;
-										max-width:400px"> 
-			<div style="background-color:white;
-			margin:0px 3px 0px 1px;
-			font-size:1em; 
-			padding:10px 17px; 
-			font-family: 'Gill Sans','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-			text-align: center; 
-            font-weight:bold; 
-            color:black;
-			box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.125);">
-			${t.remainDays} díes 
+			el.innerHTML = `			
+			<h2>El compte enrere Fins la final!</h2>
+			<div class="contenedor-contador"> 
+
+			<div class="contenido-contador">
+			${t.remainDays} <p style= "font-size:0.4em;">díes </p>
 			</div>
-			<div style="background-color:white;
-			margin:0px 3px;
-			font-size:1em; 
-			padding:10px 17px; 
-			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-			text-align: center; 
-            font-weight:bold; 
-            color:black;
-			box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.125)"> 
-			${t.remainHours} hores 
+			<div class="contenido-contador"> 
+			${t.remainHours} <p style= "font-size:0.4em;">hores</p> 
 			</div>
-			<div style="background-color:white;
-			margin:0px 3px;
-			font-size:1em; 
-			padding:10px 17px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-			text-align: center; 
-            font-weight:bold;
-            color:black;
-			box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.125)"> 
-			${t.remainMinutes} minuts 
+			<div class="contenido-contador"> 
+			${t.remainMinutes} <p style= "font-size:0.4em;">minuts </p>
 			</div> 
-			<div style="background-color:white;
-			margin:0px 0px 0px 3px;
-			font-size:1em; 
-			padding:10px 17px; 
-			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-			text-align: center; 
-            font-weight:bold; 
-            color:black;
-			box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.125)"> 
-			${t.remainSeconds} segons 
+			<div class="contenido-contador"> 
+			${t.remainSeconds} <p style= "font-size:0.4em;">segons </p>
 			</div> 
 			</div>`;
 
@@ -75,4 +46,4 @@ const getRemainTime = deadline => {
 
 	}; 
 
-	countdown('Fri May 21 2021 21:30:00 GMT+0100 (hora estándar de Europa central)', 'clock', 'Comença la final!');
+	countdown('Sat May 22 2021 21:30:00 GMT+0100 (hora estándar de Europa central)', 'clock', 'Comença la final!');

@@ -1,0 +1,108 @@
+.cont-contacte{
+    display: block;
+    margin: 0px auto;
+
+}
+.presentacion{
+    width: 1000px;
+    margin: auto;
+}
+ .presentacion h2{
+     text-align: left;
+     font-weight: 700;
+     font-size: 2.5em;
+     color:#08103e;
+     margin-bottom: 50px;
+ }
+
+ #form{
+     display: flex;
+     justify-content: space-evenly;
+     width: 100%;
+     margin: auto;
+ }
+ #form h1{
+    font-weight: 700;
+    color:  rgba(8,16,62,1);
+    width: 300px;
+    margin-right: 80px;
+    text-align: left;
+ }
+.formulari{
+    padding: 50px;
+    background-color: #d1d1d1;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.125);
+    border-radius: 2px;
+}
+
+input{
+    width: 500px;
+    padding: 7px;
+    border: none;
+    outline: none;
+
+}
+
+textarea{
+    width: 500px;
+    border: none;
+    outline: none;
+   padding: 10px;
+}
+.equipo{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+}
+.equipo h3{
+    margin-top: 30px; 
+
+}
+
+.equipo img{
+    width: 400px;
+}
+.equipo .linea{
+    width: 400px;
+    height: 2px;
+    margin: 30px 0px; 
+    background-color: #cbcbcb;
+}
+.pau, .imanol{
+    width: 400px;
+}
+
+button{
+    border: none;
+    outline: none;
+    background: linear-gradient(114deg, rgba(8,16,62,1) 0%, rgba(8,16,62,1) 31%, rgb(15, 60, 85) 100%);
+    color:white;
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+button:hover{
+    background: white;
+    color: rgba(8,16,62,1);
+}
+
+
+.rrss-info p{
+    width: 300px;
+}
+.social-contact a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0px;
+    width: 50px;
+    background-color: rgba(8,16,62,1);
+    transition: 0.5s;
+    color: white;
+    font-size: 1.5em;
+}
+
+.social-contact a:hover{
+    letter-spacing: 0px;
+    color:black;
+    background-color: white;
+}

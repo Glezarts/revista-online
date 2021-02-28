@@ -80,3 +80,31 @@ renderer.render(scene, camera);
 
 requestAnimationFrame(render);
 }
+
+
+var soundOn, soundOff, audio;
+
+soundOn = document.querySelector("#sound-on");
+soundOff = document.querySelector("#sound-off");
+audio = document.querySelector(".audio");
+
+
+
+soundOff.addEventListener("click", (e)=>{
+    e.preventDefault();
+    soundOff.style.display="none";
+    soundOn.style.display="block";
+    audio.muted = false;
+    audio.play();
+
+});
+
+soundOn.addEventListener("click", (e)=>{
+    e.preventDefault();
+    soundOff.style.display="block";
+    soundOn.style.display="none";
+    audio.muted = true;
+    audio.pause();
+
+
+})

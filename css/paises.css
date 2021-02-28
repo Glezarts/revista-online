@@ -1,0 +1,65 @@
+.pagepaises{
+    width: 100%;
+}
+.pagepaises h1{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-top:0px;
+    color: #08103E;
+}
+.pagepaises h4{
+    text-align: center;
+    font-size: 2.5em;
+    margin:20px 0px 50px 0px;
+}
+.paisos{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.paisos > li{
+    padding: 10px 0px;
+    list-style: none;
+    text-align: center;
+    font-weight: 200;
+    margin-left: 40px;
+    width: 250px;
+    border:none;
+}
+.sub-menu{
+    width: 150px;
+    padding: 10px 45px;
+
+}
+.paisos >li >ul >li{
+    list-style: none;
+    margin-left:-40px;
+    text-align: left;
+    transition: 0.5s;
+    width: 240px;
+    border: none;
+    font-size: 0.7em;
+    border-bottom: 1px solid #c1c1c1;
+    padding: 10px 0px;
+}
+.paisos a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    padding: 5px;
+    transition: 0.5s;
+}
+.paisos .menu-equal > p{
+    background-color: #08103E;
+    padding:5px 0px;
+    color: white;
+}
+.paisos li >ul >li a:hover{
+    padding-left: 20px;
+}
+.paisos a:hover {
+    text-decoration: none;
+    color: #737479;
+
+}
