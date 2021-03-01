@@ -4,461 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/carousel3d.css">
-    <link rel="stylesheet" href="./css/slide-ultima-hora.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/home.css">
-    <link rel="stylesheet" href="./css/paises.css">
-    <link rel="stylesheet" href="./css/actualitat.css">
-    <link rel="stylesheet" href="./css/contacte.css">
-    <link rel="stylesheet" href="./css/swipe_up.css">
-    <link rel="stylesheet" href="./css/entrevistas.css">
-    <link rel="stylesheet" href="./css/carousel3d.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
-    <link rel="stylesheet" href="./css/carouselowl.css">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
+    <link rel="stylesheet" href="./estilos/swipe_up.css">
+
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+            #splash-page{
+            margin: 0;
+            overflow: hidden;
+            transition: 0.9s;
+            width: 100%;
+            height: 100vh;
+            
+        }
+        .title-splashpage{
+            color:aliceblue;
+            position: absolute;
+            bottom: 200px;
+            margin-left: 40vw;
+            font-family: 'Kaushan Script', cursive;
+            font-size:4em;
+            font-weight: 100;
+        }
+        .title-splashpage2{
+            color:aliceblue;
+            position: absolute;
+            bottom: 150px;
+            margin-left: 36vw;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size:2em;
+            font-weight: 100;
+        }
+        #myCanvas{
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swipe-up{
+            position: absolute;
+            top:0;
+        }
+        #sound-on{
+            display: none;
+            position: absolute;
+            color:white;
+            top: 50px;
+            right: 45px;
+            font-size: 1.7em;
+            z-index: 2;
+        }
+        #sound-off{
+            display:block;
+            position: absolute;
+            color:white;
+            top: 50px;
+            right: 50px;
+            font-size: 1.7em;
+            z-index: 1;
+        }
+        audio{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/vue-carousel-3d@0.2.0/dist/vue-carousel-3d.min.js"></script>
-    <div class="cab">
-        <div class="cab-fondo"><!--<img src="./img/fondo-def.jpg" alt="">--></div>
-        <a class= "brand" href="./index.html"><img src="./img/blanco.png" width="300px" alt=""></a>
-        <div class="social">
-            <a href="#"><p><i class="fas fa-envelope"></i> eurovisiucontacte@gmail.com</p>  </a>
-            <a href="https://www.instagram.com/leurovisiu/?hl=es"><p><i class="fab fa-instagram"></i> @leurovisiu</p></a>
-            <a href="https://twitter.com/leurovisiu"> <p><i class="fab fab fa-twitter"></i> @eurovisiu</p> </a>
-        </div>
-    </div>
-    <!--BARRA de navegacion-->
-    <div class="topnav" id="myTopnav">
-        <a href="" id="buttonIndex">Inici</a>
-        <a href="" id="buttonCountry">Països</a>
-        <a href="" id="buttonActualitat">Actualitat</a>
-        <a href="" id="buttonEntrevista">L'Entrevista</a>
-        <a href="" id="buttonContacte">Contacte</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+    <a href="" id="sound-on"><i class="fas fa-volume-up"></i></a>
+    <a href="" id="sound-off"><i class="fas fa-volume-mute" ></i></a>
+    <div id="splash-page">
+        <audio class="audio" autoplay controls>
+            <source src="./audio/intro.mp3" type="audio/mp3"/>
+            <source src="./audio/eurovision_intro.ogg" type="audio/ogg"/>
+        </audio>
+        
+        <h1 class="title-splashpage">L'Eurovisiu</h1>
+        <h2 class="title-splashpage2">Eurovisió, més aprop que mai</h2>
+        <canvas id="myCanvas">
+            
+        </canvas>
+        <a href="" class = "swipe-up"><div class="scrollDown"></div></a>
+        
     </div>
     
-    <!--SLIDE ULTIMA HORA-->
-    <div class="lastpost-wrapper">
-        <div class="last_hour">
-            <h2 class="hora">ÚLTIMA HORA</h2>
-        </div>
-        <div class="last_post">
-            <div class="slide-track">
-                <div class="slide">
-                    <a href="./països.html"><img src="./img/Banderas/1200px-EuroAlbania.svg.png" alt=""> Albania</a>
-                </div>
-                <div class="slide">
-                    <a href="#"> <img src="./img/Banderas/1200px-EuroIsrael.svg.png" alt=""> Israel</a>
-                </div>
-                <div class="slide">
-                    <a href="#"><img src="./img/Banderas/EuroEspaña.svg.png" alt=""> Espanya</a>
-                </div>
-                <div class="slide">
-                    <a href="#"><img src="./img/Banderas/EuroPaíses_Bajos.svg.png" alt=""> Països Baixos</a>
-                </div>
-                <div class="slide">
-                    <a href="#"><img src="./img/Banderas/EuroMalta.svg.png" alt=""> Malta</a>
-                </div>
-                <div class="slide">
-                    <a href="#"><img src=".//img/Banderas/EuroMontenegro.svg.png" alt=""> Montenegro</a>
-                </div>
-                <div class="slide">
-                    <a href="#"><img src="./img/Banderas/EuroRepública_Checa.svg.png" alt=""> República Txeca</a>
-                </div>
-                <div class="slide">
-                    <a href="./països.html"><img src="./img/Banderas/EuroSuecia.svg.png" alt=""> Suècia</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="index">
-        <!--CUENTRA ATRAS-->                
-        <div id="clock"></div>
-        
-        <div class="carousel-container">
-            <div id="carousel">
-                <carousel-3d :width="900" :height="450" controls-visible="true" :perspective="0" :space="300" >
-                    <slide v-for="(slide, i) in slides" :index="i">
-                        <div class="article">
-                            <a href=""><img v-bind:src="slide.mainSrc" v-bind:class="{resize: slide.resize, resizeMed: slide.resizeMed}">
-                                <div class="titol">
-                                    <h3>{{slide.titol}}</h3>
-                                    <p class="subtitol">{{slide.subtitol}}</p>
-                                </div>
-                            </a>
-                        </div>
-                    </slide>
-                </carousel-3d>
-            </div>
-        </div>
-        <div class="carouselowl-wrp">
-            
-            <h2>Altres articles</h2>
-            <div class="carouselowl">
-                <div class="carouselowl_contenedor">
-                    <button aria-label="Anterior" class="carousel__anterior">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    
-                    <div class="carousel__lista">
-                        <a href="">
-                            <div class="carousel__elemento estilo-card ">
-                                <img src="http://placehold.it/500x200" alt="Rock and Roll Hall of Fame">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Constitution Square - Tower I">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Empire State Building">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Harmony Tower">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Empire State Building">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Harmony Tower">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Empire State Building">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Harmony Tower">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <button aria-label="Siguiente" class="carousel__siguiente">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-                
-            </div>
-        </div>     
-        
-        <div class="contenedor-articulo">
-            <div class="article-general">
-                <h2 class="titol-article">Título del artículo</h2>
-                <h3 class ="subtitol-article">Esto es un subtítulo</h3>
-                <p class="autor">Autor </p>
-                <img src="./img/img-articulos/template.jpg" width= "900px" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore iusto sequi esse? Labore natus, omnis qui facilis maxime dicta sint possimus voluptatibus, culpa dolore velit numquam alias libero explicabo voluptatum? Quasi quaerat dolor, placeat voluptatem nam odit eius repudiandae numquam distinctio at doloremque? Officiis, possimus. Dolorem accusantium animi corporis architecto itaque? Modi perferendis aperiam eveniet blanditiis suscipit quos laudantium eaque illum, praesentium, dolor molestias quam accusantium! Hic nostrum corporis similique labore fugit eaque laborum, minus quisquam nesciunt aperiam officia, maxime, perspiciatis quos molestiae fugiat quia sint velit dolorem porro nulla voluptatem doloremque. Molestias iusto nobis suscipit consectetur nam. Harum, doloremque?</p>
-            </div>
-        </div>
-            <div class="mockup">
-                <div class="text-twitter">
-                    <h2>Estigues atent de les ultimes notícies en temps real.</h2>
-                    <p>Visita el nostre Twitter.</p>
-                    <i class="far fa-hand-point-right"></i>
-                </div>
-                <div class="twitter">
-                    <img src="./img/Iphone Mockup.png" alt="">
-                    <div class="cont-twitter">
-                        <a class=" twitter-timeline" href="https://twitter.com/leurovisiu" data-widget-id="302069386464870402">Tweets por @leurovisiu</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                    </div>
-                </div>
-            </div>
-                
-            <div class="calendar">
-                <div class="titol-calendari">
-                    <h2> CALENDARI D'ESDEVENIMENTS EUROVISIÓ</h2>
-                </div>
-                <div class="iframe-calendari">
-                    <iframe src="https://eurovisionworld.com/eurovision/calendar" style="border:none;" title="Iframe Example"></iframe>
-                </div>
-
-            </div>   
-          
-            
-           
-    </div>    
-            <div class="pagepaises">
-                <!--CONTENIDO PAGINA PAISES-->
-                <h1>En vols saber més?</h1>
-                <h4>Descobreix notícies de cada país </h4>
-                <ul class="paisos">
-                    <li class="menu-equal menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221710"><p>A-D</p>
-                        <ul class="sub-menu">
-                            <li class="menu-item submenu-item menu-item-19297"><a href=""><img src="./img/Banderas/1200px-EuroAlbania.svg.png" alt=""> Albania</a></li>
-                            <li class="menu-item submenu-item menu-item-19315"><a href=""><img src="./img/Banderas/alemania.png" alt=""> Alemanya</a></li>
-                            <li class="menu-item submenu-item menu-item-19299"><a href=""><img src="./img/Banderas/EuroArmenia.svg.png" alt=""> Armènia</a></li>
-                            <li class="menu-item submenu-item menu-item-78330"><a href=""><img src="./img/Banderas/australia.png" alt=""> Austràlia</a></li>
-                            <li class="menu-item submenu-item menu-item-19300"><a href=""><img src="./img/Banderas/1200px-EuroAustria.svg.png" alt=""> Àustria</a></li>
-                            <li class="menu-item submenu-item menu-item-19301"><a href=""><img src="./img/Banderas/EuroAzerbaiyán.svg.png" alt=""> Azerbaijan</a></li>
-                            <li class="menu-item submenu-item menu-item-19302"><a href=""><img src="./img/Banderas/bielorrusia.png" alt=""> Bielorússia</a></li>
-                            <li class="menu-item submenu-item menu-item-19303"><a href=""><img src="./img/Banderas/EuroBélgica.svg.png" alt=""> Bèlgica</a></li>
-                            <li class="menu-item submenu-item menu-item-19304"><a href=""><img src="./img/Banderas/bosniayhercegobina.png" alt=""> Bòsnia i Hercegovina</a></li>
-                            <li class="menu-item submenu-item menu-item-19305"><a href=""><img src="./img/Banderas/bulgaria.png" alt=""> Bulgària</a></li>
-                            <li class="menu-item submenu-item menu-item-19306"><a href=""><img src="./img/Banderas/croacia.png" alt=""> Croàcia</a></li>
-                            <li class="menu-item submenu-item menu-item-19309"><a href=""><img src="./img/Banderas/dinamarca.png" alt=""> Dinamarca</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-equal menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221712"><p>E-I</p>
-                        <ul class="sub-menu">
-                            <li class="menu-item submenu-item menu-item-19310"><a href=""><img src="./img/Banderas/EuroEstonia.svg.png" alt=""> Estònia</a></li>
-                            <li class="menu-item submenu-item menu-item-19336"><a href=""><img src="./img/Banderas/EuroEslovaquia.svg.png" alt=""> Eslovàquia</a></li>
-                            <li class="menu-item submenu-item menu-item-19337"><a href=""><img src="./img/Banderas/EuroEslovenia.svg.png" alt=""> Eslovènia</a></li>
-                            <li class="menu-item submenu-item menu-item-19338"><a href=""><img src="./img/Banderas/EuroEspaña.svg (1).png" alt=""> Espanya</a></li>
-                            <li class="menu-item submenu-item menu-item-19311"><a href=""><img src="./img/Banderas/finlandia.png" alt=""> Finlàndia</a></li>
-                            <li class="menu-item submenu-item menu-item-19312"><a href=""><img src="./img/Banderas/1200px-EuroFrancia.svg.png" alt=""> França</a></li>
-                            <li class="menu-item submenu-item menu-item-19314"><a href=""><img src="./img/Banderas/EuroGeorgia.svg.png" alt=""> Geòrgia</a></li>
-                            <li class="menu-item submenu-item menu-item-19316"><a href=""><img src="./img/Banderas/grecia.png" alt=""> Grècia</a></li>
-                            <li class="menu-item submenu-item menu-item-19317"><a href=""><img src="./img/Banderas/EuroHungría.svg.png" alt=""> Hongria</a></li>
-                            <li class="menu-item submenu-item menu-item-19318"><a href=""><img src="./img/Banderas/EuroIslandia.svg.png" alt=""> Islàndia</a></li>
-                            <li class="menu-item submenu-item menu-item-19319"><a href=""><img src="./img/Banderas/EuroIrlanda.svg.png" alt=""> Irlanda</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-equal menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221713"><p>L-P</p>
-                        <ul class="sub-menu">
-                            <li class="menu-item submenu-item menu-item-19320"><a href=""><img src="./img/Banderas/israel.png" alt=""> Israel</a></li>
-                            <li class="menu-item submenu-item menu-item-19321"><a href=""><img src="./img/Banderas/EuroItalia.svg.png" alt=""> Itàlia</a></li>
-                            <li class="menu-item submenu-item menu-item-19322"><a href=""><img src="./img/Banderas/1200px-EuroLetonia.svg.png" alt=""> Letònia</a></li>
-                            <li class="menu-item submenu-item menu-item-19323"><a href=""><img src="./img/Banderas/1200px-EuroLithuania.svg.png" alt=""> Lithuania</a></li>
-                            <li class="menu-item submenu-item menu-item-19324"><a href=""><img src="./img/Banderas/EuroMalta.svg.png" alt=""> Malta</a></li>
-                            <li class="menu-item submenu-item menu-item-19325"><a href=""><img src="./img/Banderas/moldavia.png" alt=""> Moldàvia</a></li>
-                            <li class="menu-item submenu-item menu-item-19326"><a href=""><img src="./img/Banderas/EuroMontenegro.svg.png" alt=""> Montenegro</a></li>
-                            <li class="menu-item submenu-item menu-item-19327"><a href=""><img src="./img/Banderas/paisesbajos.png" alt=""> Països Baixos</a></li>
-                            <li class="menu-item submenu-item menu-item-19313"><a href=""><img src="./img/Banderas/1200px-EuroMacedonia_del_Norte.svg.png" alt=""> Macedònia del Nord</a></li>
-                            <li class="menu-item submenu-item menu-item-19328"><a href=""><img src="./img/Banderas/EuroNoruega.svg.png" alt=""> Noruega</a></li>
-                            <li class="menu-item submenu-item menu-item-19329"><a href=""><img src="./img/Banderas/EuroPolonia.svg.png" alt=""> Polònia</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-equal menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221714"><p>R-U</p>
-                        <ul class="sub-menu">
-                            <li class="menu-item submenu-item menu-item-19330"><a href=""><img src="./img/Banderas/portugal.png" alt=""> Portugal</a></li>
-                            <li class="menu-item submenu-item menu-item-19343"><a href=""><img src="./img/Banderas/EuroReino_Unido.svg.png" alt=""> Regne Unit</a></li>
-                            <li class="menu-item submenu-item menu-item-19308"><a href=""><img src="./img/Banderas/EuroRepública_Checa.svg.png" alt=""> República Txeca</a></li>
-                            <li class="menu-item submenu-item menu-item-19331"><a href=""><img src="./img/Banderas/EuroRumania.svg.png" alt=""> Romania</a></li>
-                            <li class="menu-item submenu-item menu-item-19332"><a href=""><img src="./img/Banderas/png-clipart-russia-eurovision-song-contest-country-party-for-everybody-language-contest-love-heart.png" alt=""> Russia</a></li>
-                            <li class="menu-item submenu-item menu-item-19333"><a href=""><img src="./img/Banderas/sanmarino.png" alt=""> San Marino</a></li>
-                            <li class="menu-item submenu-item menu-item-19335"><a href=""><img src="./img/Banderas/serbia.png" alt=""> Sèrbia</a></li>
-                            <li class="menu-item submenu-item menu-item-19339"><a href=""><img src="./img/Banderas/suecia.png" alt=""> Suècia</a></li>
-                            <li class="menu-item submenu-item menu-item-19340"><a href=""><img src="./img/Banderas/1200px-EuroSuiza.svg.png" alt=""> Suïssa</a></li>
-                            <li class="menu-item submenu-item menu-item-19342"><a href=""><img src="./img/Banderas/EuroUcrania.svg.png" alt=""> Ucraïna</a></li>
-                            <li class="menu-item submenu-item menu-item-19341"><a href=""><img src="./img/Banderas/turquia.png" alt=""> Turquia</a></li>
-                            <li class="menu-item submenu-item menu-item-19307"><a href=""><img src="./img/Banderas/chipre.png" alt=""> Xipre</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="pageactualitat">
-                <div class="cont-actualitat">
-                    <div class="article-actualitat">
-                        <h2 class="titol-article">Título del artículo</h2>
-                        <h3 class ="subtitol-article">Esto es un subtítulo</h3>
-                        <img src="./img/img-articulos/template.jpg" width= "900px" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore iusto sequi esse? Labore natus, omnis qui facilis maxime dicta sint possimus voluptatibus, culpa dolore velit numquam alias libero explicabo voluptatum? Quasi quaerat dolor, placeat voluptatem nam odit eius repudiandae numquam distinctio at doloremque? Officiis, possimus. Dolorem accusantium animi corporis architecto itaque? Modi perferendis aperiam eveniet blanditiis suscipit quos laudantium eaque illum, praesentium, dolor molestias quam accusantium! Hic nostrum corporis similique labore fugit eaque laborum, minus quisquam nesciunt aperiam officia, maxime, perspiciatis quos molestiae fugiat quia sint velit dolorem porro nulla voluptatem doloremque. Molestias iusto nobis suscipit consectetur nam. Harum, doloremque?</p>
-                    </div>
-               
-     
-                    <aside>
-                        
-                        <a class="twitter-timeline" href="https://twitter.com/leurovisiu" data-widget-id="302069386464870402">Tweets por @leurovisiu</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                        
-                        
-                        
-                    
-                        
-                    </aside>
-                </div>    
-            </div>
-            
-            <div class="pageentrevistas">
-                <div class="cont-entrevistas">
-                    <div class="article-entrevistas">
-                        <h2 class="titol-article">Título del artículo</h2>
-                        <h3 class ="subtitol-article">Esto es un subtítulo</h3>
-                        <iframe width="900" height="400" src="https://www.youtube.com/embed/Ed2ZhITqKJc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore iusto sequi esse? Labore natus, omnis qui facilis maxime dicta sint possimus voluptatibus, culpa dolore velit numquam alias libero explicabo voluptatum? Quasi quaerat dolor, placeat voluptatem nam odit eius repudiandae numquam distinctio at doloremque? Officiis, possimus. Dolorem accusantium animi corporis architecto itaque? Modi perferendis aperiam eveniet blanditiis suscipit quos laudantium eaque illum, praesentium, dolor molestias quam accusantium! Hic nostrum corporis similique labore fugit eaque laborum, minus quisquam nesciunt aperiam officia, maxime, perspiciatis quos molestiae fugiat quia sint velit dolorem porro nulla voluptatem doloremque. Molestias iusto nobis suscipit consectetur nam. Harum, doloremque?</p>
-                    </div>
-                    <aside>
-                        
-                        <a class="twitter-timeline" href="https://twitter.com/leurovisiu" data-widget-id="302069386464870402">Tweets por @leurovisiu</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                        
-                        
-                        
-                        
-                        
-                    </aside>
-                    
-                </div>
-            </div>
-            <div class="pagecontacte">
-                <div class="cont-contacte">
-                    <div class="presentacion">
-                        <h2>Qui som?</h2>
-                        <p>L'Eurovisiu nace en 2020 como proyecto universitario de dos estudiantes de Periodismo de la Universitat Pompeu Fabra, Barcelona. Comienza con la idea y necesidad de cubrir la información de entretenimiento musical sobre el famoso <i>Festival de la Canción</i></p>
-                        <p>Somos el primer medio especializado en información del festival d'Eurovisió específicamente en catalá, con la finalidad de dirigirnos a nuestro público más cercano y despertar el interés por el 4º arte.</p>
-                        <p></p>
-                        <div class="equipo">
-                            <div class="pau">
-                                <img src="./img/team/PauWokan.jpg" alt="">
-                                <h3>Pau Requena</h3>
-                                <div class="linea"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sequi iure totam eaque minima id iste labore quaerat? Magni aperiam deserunt non est quasi dolor commodi excepturi adipisci debitis, quia nobis, deleniti ut rem numquam incidunt ea minus placeat molestiae esse minima totam animi ipsa? Corrupti quibusdam nemo dolorem corporis?</p>
-                            </div>
-                            <div class="imanol">
-                                <img src="./img/team/PauWokan.jpg" alt="">
-                                <h3>Imanol</h3>
-                                <div class="linea"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sequi iure totam eaque minima id iste labore quaerat? Magni aperiam deserunt non est quasi dolor commodi excepturi adipisci debitis, quia nobis, deleniti ut rem numquam incidunt ea minus placeat molestiae esse minima totam animi ipsa? Corrupti quibusdam nemo dolorem corporis?</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="form">
-                        <div class="rrss-info">
-                            <h1>Contacta amb nosaltres</h1>
-                            <p>Podeu escriure'ns mitjançant RRSS, directament al nostre correu electrònic o mitjançant aquest formulari</p>
-                            <div class="social-contact">
-                                <a href="#"><div><i class="fas fa-envelope"></i> </div></a>
-                                <a href="https://www.instagram.com/leurovisiu/?hl=es"><div><i class="fab fa-instagram"></i></div></a>
-                                <a href="https://twitter.com/leurovisiu"><div><i class="fab fab fa-twitter"></i>  </div></a>
-                            </div>
-                        </div>
-                        <div class="formulari">
-                            
-                            <input type="text" name="nom" id="nom" placeholder="Nom*" @keyup="checkNom" v-model="temp_nom">
-                            <span class="initially-hidden" v-bind:class="{ visible: nomVisible }">
-                                <i v-if="nomCorrect" style="color:rgb(0, 185, 62);" style="color:rgb(0, 185, 62);" class="fas fa-check"></i>
-                                <i v-else style="color:rgb(212, 0, 0);" class="fas fa-exclamation-circle"></i>
-                            </span><br><br>
-                            <input type="email" id="correu" placeholder="Correu electrònic*" @keyup="checkCorreu" name="correu" v-model="temp_email">
-                            
-                            <span class="initially-hidden" v-bind:class="{ visible: correuVisible }">
-                                <i v-if="correuCorrect" style="color:rgb(0, 185, 62);" class="fas fa-check"></i>
-                                <i v-else style="color:rgb(212, 0, 0);" class="fas fa-exclamation-circle"></i>
-                            </span><br><br>
-                            <input type="number" id ="telefon" placeholder="Telèfon" @keyup="checkTlf" name="telefono" v-model="temp_tlf">
-                            <span class="initially-hidden" v-bind:class="{ visible: tlfVisible }">
-                                <i v-if="tlfCorrect" style="color:rgb(0, 185, 62);" class="fas fa-check"></i>
-                                <i v-else style="color:rgb(212, 0, 0);" class="fas fa-exclamation-circle"></i>
-                            </span><br><br>
-                            <textarea name="message" id="misatge" name="mensaje" cols="30" rows="10" @keyup="checkMessage" placeholder="Escriu el teu misatge*"></textarea><br><br>
-                            <span class="initially-hidden" v-bind:class="{ visible: messageVisible }">
-                                <i v-if="missCorrect" style="color:rgb(0, 185, 62);" class="fas fa-check"></i>
-                                <i v-else style="color:rgb(212, 0, 0);" class="fas fa-exclamation-circle"></i>
-                            </span><br><br>
-                            
-                            <button v-on:click='enviar'>Enviar</button><br><br>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            
-            
-            
-            <!--FOOTER-->
-            <footer id= "footer">
-                <div class="cont-footer">
-                    <div class="social-footer">
-                        <a href="#"><div><i class="fas fa-envelope"></i> </div></a>
-                        <a href="https://www.instagram.com/leurovisiu/?hl=es"><div><i class="fab fa-instagram"></i></div></a>
-                        <a href="https://twitter.com/leurovisiu"><div><i class="fab fab fa-twitter"></i>  </div></a>
-                    </div>
-                    <div class="infoweb">
-                        
-                        <p>&copy; 2020 L'Eurovisiu &#124; Tots els drets reservats</p>
-                        <p>Lloc web creat per:
-                            <div><a href="https://17nis.github.io/">Genis Frigola</a> </div> <div><a href="www.glezart.com">Glezart</a></div> </p>
-                        </div>
-                        
-                    </div>
-                    
-                    
-                </footer>  
-            
-            
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.7/vue.js"></script>
-            <script src="https://rawgit.com/Wlada/vue-carousel-3d/master/dist/vue-carousel-3d.min.js"></script>
-            <script>
-                new Vue({
-                    el: '#carousel',
-                    data: {
-                        slides: [{
-                            titol: 'Islandia',
-                            mainSrc:'./img/img-articulos/template.jpg',
-                            subtitol: 'Lorem ipsum',
-                            resize: false
-                        }, {
-                            title: 'Islandia',
-                            mainSrc:'./img/img-articulos/template.jpg',
-                            
-                            resize: true
-                        }, {
-                            titol: 'Islandia',
-                            mainSrc:'./img/img-articulos/template.jpg',
-                            resize: false,
-                            resizeMed: true
-                        }]
-                    },
-                    components: {
-                        'carousel-3d': Carousel3d.Carousel3d,
-                        'slide': Carousel3d.Slide
-                    }
-                })
-            </script>
-            
-            <script src="./js/nav.js"></script>
-            <script src="./js/nav-page.js"></script>
-            <script src="./js/cuenta-atras.js"></script>
-            <script src="./js/changepage.js"></script>
-            <script src="./js/formulario.js"></script>
-            <script src="./js/carousel.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-           
-    </body>
-    </html>
+    <script src="./Nueva carpeta/Loading_page_eurovisiu/three.js"></script>
+    <script src="./Nueva carpeta/Loading_page_eurovisiu/GLTFLoader.js"></script>
+    <script src="./Nueva carpeta/Loading_page_eurovisiu/OrbitControls.js"></script>
+    <script type="module" src="./js/splash-page.js" ></script>
+    <script src="./js/changepage.js"></script>
+</body>
+</html>

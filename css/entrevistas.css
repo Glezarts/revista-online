@@ -1,5 +1,5 @@
 .pageentrevistas{
-  
+
     width: 100%;
 
 }
@@ -19,6 +19,7 @@ margin: 20px 0px;
 line-height: 25px;
 }
 .pageentrevistas  iframe{
+    width: 900;
     height: 400px;
     margin:0;
 }

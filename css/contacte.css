@@ -1,11 +1,14 @@
 .cont-contacte{
     display: block;
     margin: 0px auto;
-
+    width: 100%;
 }
 .presentacion{
-    width: 1000px;
+    width: 60%;
     margin: auto;
+}
+.presentacion p{
+    width: 100%;
 }
  .presentacion h2{
      text-align: left;
@@ -18,7 +21,6 @@
  #form{
      display: flex;
      justify-content: space-evenly;
-     width: 100%;
      margin: auto;
  }
  #form h1{
@@ -33,10 +35,12 @@
     background-color: #d1d1d1;
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.125);
     border-radius: 2px;
+    width: 600px;
+
 }
 
 input{
-    width: 500px;
+    width: 100%;
     padding: 7px;
     border: none;
     outline: none;
@@ -44,7 +48,7 @@ input{
 }
 
 textarea{
-    width: 500px;
+    width: 100%;
     border: none;
     outline: none;
    padding: 10px;
@@ -60,7 +64,8 @@ textarea{
 }
 
 .equipo img{
-    width: 400px;
+    width: 100%;
+    
 }
 .equipo .linea{
     width: 400px;

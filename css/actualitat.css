@@ -1,5 +1,5 @@
 .pageActualitat{
-
+	width: 100%;
 }
 .cont-actualitat{
     display: flex;
@@ -9,7 +9,10 @@
 }
 
 .article-actualitat{
-    width: 900px;
+    max-width: 900px;
+}
+.article-actualitat img{
+	width: 100%;
 }
 .titol-article{
     font-size: 3em;
@@ -18,7 +21,7 @@
 .subtitol-article{
     font-size: 1.5em;
     font-weight: 300;
-    margin: 0.5em 0px 0px 0px;
+    margin: 0.5em 0px 10px 0px;
 }
 
 .article-actualitat p{
@@ -121,18 +124,4 @@ aside{
     padding: 10px 0px;
     margin:-5px 0px 50px 0px;
     color:white;
-}
-
-@media screen and (max-width: 800px) {
-	body {
-		padding: 40px 0;
-	}
-
-	.contenido-principal {
-		flex-direction: column;
-	}
-
-	.contenido-principal > * {
-		width: 100%;
-	}
 }

@@ -8,22 +8,6 @@ var subtitleSplashPage = document.querySelector(".title-splashpage2")
 var pageIndex = document.querySelector(".index");
 var buttonIndex = document.querySelector("#buttonIndex");
 
-//paises
-
-var buttonCountry = document.querySelector("#buttonCountry");
-var pageCountry = document.querySelector(".pagepaises");
-//actualidad
-var pageActualitat= document.querySelector(".pageactualitat");
-var buttonActualitat = document.querySelector("#buttonActualitat");
-
-// entrevistas
-var buttonEntrevista = document.querySelector("#buttonEntrevista");
-var pageEntrevistas = document.querySelector(".pageentrevistas");
-
-//contacto
-var pageContacte = document.querySelector(".pagecontacte");
-var buttonContacte  = document.querySelector("#buttonContacte");
-
 
 var soundOn, soundOff, audio;
 
@@ -60,19 +44,18 @@ buttonSplashPage.addEventListener("click", (e)=>{
         titleSplashPage.style.display="none";
         subtitleSplashPage.style.display="none";
         pageCountry.style.display = "none";
-        ContActualitat.style.display = "none";
         pageEntrevistas.style.display = "none";
         soundOff.style.display="none";
         pageContacte.style.display = "none";
     
     }
-    window.location.href = '/index.html';
+    window.location.href = '/index2.html';
 })
 
 var started = false;
 
 window.addEventListener("click", (e) => {
-    window.location.href = './index.html';
+    window.location.href = './index2.html';
 
     if (!started && !buttonSplashPage.contains(e.target)) {
         splashPage.style.height = "0";
@@ -90,56 +73,4 @@ window.addEventListener("click", (e) => {
 
 })
 
-buttonCountry.addEventListener("click", (e)=>{
-    e.preventDefault();
-    pageIndex.style.display = "none";
-    pageCountry.style.display ="block";
-    pageActualitat.style.display = "none";
-    pageEntrevistas.style.display = "none";
-    pageContacte.style.display ="none";
-
-})
-buttonIndex.addEventListener("click", (e)=>{
-    e.preventDefault();
-    pageCountry.style.display = "none";
-    pageActualitat.style.display = "none";
-    pageIndex.style.display ="block";
-    pageEntrevistas.style.display ="none";
-    pageContacte.style.display ="none";
-
-
-})
-buttonActualitat.addEventListener("click", (e)=>{
-    e.preventDefault();
-    pageCountry.style.display = "none";
-    pageIndex.style.display ="none";
-    pageActualitat.style.display = "block";
-    pageEntrevistas.style.display ="none";
-    pageContacte.style.display ="none";
-
-})
-
-buttonEntrevistas.addEventListener("click", (e)=>{
-    e.preventDefault();
-    pageCountry.style.display = "none";
-    pageIndex.style.display ="none";
-    pageActualitat.style.display = "none";
-    pageContacte.style.display="none";
-    pageEntrevistas.style.display ="block";
-    pageContacte.style.display ="none";
-
-})
-
-buttonContacte.addEventListener("click", (e)=>{
-    e.preventDefault();
-    pageCountry.style.display = "none";
-    pageIndex.style.display ="none";
-    pageActualitat.style.display = "none";
-    pageContacte.style.display="none";
-    pageEntrevistas.style.display ="none";
-    pageContacte.style.display ="block";
-
-})
-
-// AUDIO 
 

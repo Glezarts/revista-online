@@ -19,8 +19,8 @@ footer{
 }
 .cont-footer .social-footer{
     display: flex;
-    justify-content: space-evenly;
-    margin: 0px 400px ;
+    justify-content: center;
+    margin: 0px auto ;
     padding:0;
     position: relative;
     font-size: 2em;

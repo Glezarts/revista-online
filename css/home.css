@@ -28,14 +28,11 @@ body:-webkit-scrollbar-track{
     text-transform: uppercase; 
     color: #08103E;
     margin-bottom: -1px;
-    padding: 10px 0px;
+    padding: 10px auto;
 }
 #clock{
-width: 500px; 
+width: 100%; 
 margin: -50px auto 0px auto;   
-/*background: linear-gradient(114deg, rgba(8,16,62,1) 0%, rgba(8,16,62,1) 31%, rgba(44,124,168,1) 100%);*/
-}
-.contenedor-contador{
 }
 
 .initially-hidden{
@@ -150,7 +147,7 @@ a .twitter-timeline{
 
 .titol-calendari{
     background-color: #08103E;
-    padding: 100px;
+    padding: 50px ;
     position: absolute;
     width: 100%;
     color: white;
@@ -174,6 +171,7 @@ iframe{
     padding: 50px 50px ;
 }
 .article-general img{
+    max-width: 900px;
     margin: 0px auto;
 }
 .article-general  p{
