@@ -126,9 +126,12 @@
     }
 
         @media screen and (max-width: 1000px) {
-         
+         #clock{
+             margin: 0px;
+
+         }
         .article {
-            width:100vw;
+            width:100%;
         }
      
       .article .titol{

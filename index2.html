@@ -94,7 +94,7 @@
             <div id="carousel">
                 <carousel-3d :width="900" :height="450" controls-visible="true" :perspective="0" :space="300" >
                     <slide v-for="(slide, i) in slides" :index="i">
-                        <div class="article">
+                        <div class="article3d">
                             <a href=""><img v-bind:src="slide.mainSrc" :image-ratio="16/9" v-bind:class="{resize: slide.resize, resizeMed: slide.resizeMed}">
                                 <div class="titol">
                                     <h3>{{slide.titol}}</h3>
@@ -192,14 +192,28 @@
         </div>     
         
         <div class="contenedor-articulo">
-            <div class="article-general">
-                <h2 class="titol-article">Título del artículo</h2>
-                <h3 class ="subtitol-article">Esto es un subtítulo</h3>
-                <p class="autor">Autor </p>
-                <img src="./img/img-articulos/template.jpg"  alt="">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore iusto sequi esse? Labore natus, omnis qui facilis maxime dicta sint possimus voluptatibus, culpa dolore velit numquam alias libero explicabo voluptatum? Quasi quaerat dolor, placeat voluptatem nam odit eius repudiandae numquam distinctio at doloremque? Officiis, possimus. Dolorem accusantium animi corporis architecto itaque? Modi perferendis aperiam eveniet blanditiis suscipit quos laudantium eaque illum, praesentium, dolor molestias quam accusantium! Hic nostrum corporis similique labore fugit eaque laborum, minus quisquam nesciunt aperiam officia, maxime, perspiciatis quos molestiae fugiat quia sint velit dolorem porro nulla voluptatem doloremque. Molestias iusto nobis suscipit consectetur nam. Harum, doloremque?</p>
+            <div id="app">
+              <div class="flex">
+                <article-vue v-if="fetchDone" v-for="el of articles" v-bind:key="el.id"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
+              </div>
             </div>
+          
+            <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+            <script src="./firebase/getArticles/getArticle.js"></script>
+            <script type="text/x-template" id="templateArticleImg">
+              <div class= "article article-general"> 
+                <h2 class='titol titol-article'> {{titol}} </h2> 
+                <h4 class='subtitol subtitol-article'> {{subtitol}}</h4> 
+                <p class='autor'>{{autor}}</p> 
+                <img width="600px" v-bind:src="img">  
+                <p class='contigut'><span v-html="contingut"></span></p>
+              </div>
+            </script>
         </div>
+       
+
             <div class="mockup">
                 <div class="text-twitter">
                     <h2>Estigues atent de les ultimes notícies en temps real.</h2>
@@ -299,13 +313,12 @@
             </div>
             <div class="pageactualitat">
                 <div class="cont-actualitat">
-                    <div class="article-actualitat">
-                        <h2 class="titol-article">Título del artículo</h2>
-                        <h3 class ="subtitol-article">Esto es un subtítulo</h3>
-                        <p class ="autor"></p>
-                        <img src="./img/img-articulos/template.jpg"  alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore iusto sequi esse? Labore natus, omnis qui facilis maxime dicta sint possimus voluptatibus, culpa dolore velit numquam alias libero explicabo voluptatum? Quasi quaerat dolor, placeat voluptatem nam odit eius repudiandae numquam distinctio at doloremque? Officiis, possimus. Dolorem accusantium animi corporis architecto itaque? Modi perferendis aperiam eveniet blanditiis suscipit quos laudantium eaque illum, praesentium, dolor molestias quam accusantium! Hic nostrum corporis similique labore fugit eaque laborum, minus quisquam nesciunt aperiam officia, maxime, perspiciatis quos molestiae fugiat quia sint velit dolorem porro nulla voluptatem doloremque. Molestias iusto nobis suscipit consectetur nam. Harum, doloremque?</p>
+                    <div id="app">
+                        <div class="flex">
+                          <article-vue v-if="fetchDone" v-for="el of articles" v-bind:key="el.id"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
+                        </div>
                     </div>
+                      
                
      
                     <aside>

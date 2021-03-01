@@ -11,8 +11,9 @@
 <body>
   <div class="content">
     <header>
-      <div class="cab-fondo"><img src="./fondo-def.jpg" alt=""></div>
-      <a class= "brand" href="./index.html"><img src="./blanco.png" width="300px" alt=""></a>
+      <div class="cab-fondo">      
+        <a class= "brand" href="./index.html"><img src="./blanco.png" width="300px" alt=""></a>
+      </div>
       <h1>Escriviu aquí els vostres articles</h1>
       <p>El contingut que escriviu en aquest document s'actualitzarà en la web. 
       </p>
@@ -33,9 +34,11 @@
     </div>
     <div class="contenidor">
       <label for="contingut"><span class="italic">Contingut de l'article</span></label>
-      <div contenteditable=true id="contingut">Aquí hi anirà el text</div>
-      <button id="bold" onmousedown="toBold()">Bold</button>
-      <button id="italic"  onmousedown="toItalic()">Italic</button>
+      <div contenteditable=true id="contingut" >Aquí hi anirà el text del article</div>
+      <div class="botones-estilo-text">
+        <button id="bold" onmousedown="toBold()">Bold</button>
+        <button id="italic"  onmousedown="toItalic()">Italic</button>
+      </div>
     </div>
     
     <div class="contenidor">

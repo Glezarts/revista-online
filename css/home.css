@@ -1,6 +1,5 @@
 body{
     background-color: rgb(231, 231, 231);
-
 }
 body:-webkit-scrollbar-track{ 
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,3);
@@ -170,8 +169,14 @@ iframe{
     background-color: white;
     padding: 50px 50px ;
 }
+.article-general  .subtitol-article{
+    font-size: 1.5em;
+    margin-top: -20px;
+    padding: 0;
+    color:black
+}
 .article-general img{
-    max-width: 900px;
+    width: 900px;
     margin: 0px auto;
 }
 .article-general  p{
@@ -181,4 +186,5 @@ iframe{
 .article-general .autor{
     margin-top: 10px;
     margin-bottom: 30px;
+    font-style: italic;
 }

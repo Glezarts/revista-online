@@ -27,7 +27,7 @@
       <h4 class='subtitol'> {{subtitol}}</h4> 
       <p class='autor'>{{autor}}</p> 
       <img width="600px" v-bind:src="img">  
-      <p class='contigut'>{{contingut}} </p>
+      <p class='contigut'><span v-html="contingut"></span></p>
     </div>
   </script>
 </body>
