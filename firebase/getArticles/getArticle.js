@@ -1,7 +1,7 @@
 
 Vue.component("article-vue",{
   props: ["titol","contingut","subtitol","autor", "img"],
-  template: "#templateArticle"
+  template:"#templateArticleImg"
 });
 
 var app = new Vue ({
@@ -25,12 +25,14 @@ var app = new Vue ({
 
 async function load() {
   for(article in app.articles){
-    var url = await firebase.storage().ref('articles/' + app.articles[article].imatge).getDownloadURL()
+    if(app.articles[article].imatge){
+      var url = await firebase.storage().ref('articles/' + app.articles[article].imatge).getDownloadURL()
       app.articles[article].imatge = url;
-      console.log(app.articles[article].imatge);
+      console.log(url);
     }
-    app.fetchDone = true;
   }
+  app.fetchDone = true;
+}
 
 var firebaseConfig = {
   apiKey: "AIzaSyA5-G20uoAdIfb74mdV-pz4DMuZNLoF1kE",
