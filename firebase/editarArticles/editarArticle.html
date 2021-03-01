@@ -27,7 +27,7 @@
       <h4 class='subtitol contEd'> {{subtitol}}</h4> 
       <p class='autor contEd'>{{autor}}</p> 
       <img width="600px" v-bind:src="img">  
-      <p class='contingut contEd'>{{contingut}} </p>
+      <p class='contingut contEd'><span v-html="contingut"></span> </p>
       <button class="edit" @click='editArticle'>Edit</button>
       <button class="delete" @click='deleteArticle'>Delete</button>
     </div>

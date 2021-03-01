@@ -9,9 +9,9 @@ function toBold() {
 
   var selectedIndex = page_content.indexOf(markerTextChar.textContent);
   console.log("selected from ", selectedIndex, "length: ", markerTextChar.textContent.length)
-  var markerEl, markerId = "sel_" + new Date().getTime() + "_" + Math.random().toString().substr(2);
+  // var markerEl, markerId = "sel_" + new Date().getTime() + "_" + Math.random().toString().substr(2);
   markerEl = document.createElement("b");
-  markerEl.id = markerId;
+  // markerEl.id = markerId;
 
   markerEl.appendChild(markerTextChar);
 
@@ -25,9 +25,9 @@ function toItalic() {
 
   var selectedIndex = page_content.indexOf(markerTextChar.textContent);
   console.log("selected from ", selectedIndex, "length: ", markerTextChar.textContent.length)
-  var markerEl, markerId = "sel_" + new Date().getTime() + "_" + Math.random().toString().substr(2);
+  // var markerEl, markerId = "sel_" + new Date().getTime() + "_" + Math.random().toString().substr(2);
   markerEl = document.createElement("i");
-  markerEl.id = markerId;
+  // markerEl.id = markerId;
 
   markerEl.appendChild(markerTextChar);
 

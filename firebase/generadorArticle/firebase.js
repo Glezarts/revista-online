@@ -37,15 +37,29 @@ send.addEventListener("click", function() {
       sec.push(checkbox.closest("label").innerText);
     }  
   }
-  if(file)var objecte =  {titol: ti.value, subtitol: sub.value, contingut: cont.innerText, seccions: sec, autor: aut.value, imatge: fileName}
-  else var objecte = {titol: ti.value, subtitol: sub.value, contingut: cont.innerText, seccions: sec, autor: aut.value};
+  if(ti.value && sub.value && cont.innerHTML && aut.value){
+    if(file)var objecte =  {titol: ti.value, subtitol: sub.value, contingut: cont.innerHTML, seccions: sec, autor: aut.value, imatge: fileName}
+    else var objecte = {titol: ti.value, subtitol: sub.value, contingut: cont.innerHTML, seccions: sec, autor: aut.value};
+  } else {return alert("T'has deixat algun camp sense omplir")}
   
   // send info to database and storage
   if(file) firebase.storage().ref('articles/' + fileName).put(file);
   firebase.database().ref('articles/').push(objecte);
 
 
-
   // feedback a l'usuari
   feedback.style.display = 'block';
+  ti.value = "";
+  sub.value = "";
+  cont.innerHTML = "";
+  aut.value = "";
+  fileButton.value = "";
+  for (var checkbox of cb) {   
+    checkbox.checked = false;  
+  }
+
+  setTimeout(()=>{
+    feedback.style.display = 'none';
+  },2000)
+  
 });
