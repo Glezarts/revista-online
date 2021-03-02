@@ -31,7 +31,7 @@ send.addEventListener("click", function() {
   
   // Prepare object
   let sec= [];
-  let cb = document.querySelectorAll(".cb");
+  let cb = document.querySelectorAll(".CB");
   for (var checkbox of cb) {  
     if (checkbox.checked){  
       sec.push(checkbox.closest("label").innerText);

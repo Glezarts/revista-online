@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get article</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <link rel="stylesheet" href="getArticle.css">
+</head>
+<body>
+  <h1>Article reutilitzable fet amb VUE</h1>
+  <div id="app">
+    <div class="flex">
+      <article-vue v-if="fetchDone" v-for="el of articles" v-bind:key="el.id"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
+    </div>
+  </div>
+  
+  
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+  <script src="getArticle.js"></script>
+  <script type="text/x-template" id="templateArticleImg">
+    <div class= "article"> 
+      <h2 class='titol'> {{titol}} </h2> 
+      <h4 class='subtitol'> {{subtitol}}</h4> 
+      <p class='autor'>{{autor}}</p> 
+      <img width="600px" v-bind:src="img">  
+      <p class='contigut'><span v-html="contingut"></span></p>
+    </div>
+  </script>
+</body>
+</html>
+
+

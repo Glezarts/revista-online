@@ -3,6 +3,5 @@ const SECTIONS = ['General','Destacado', 'Actualidad', 'Entrevista', 'Alemanya',
 var contCB = document.querySelector('#contCB');
 
 for(let i = 0; i < SECTIONS.length; i++){
-  contCB.innerHTML += `<label class="CB">  <input type="checkbox" /> ${SECTIONS[i]}</label>`
+  contCB.innerHTML += `<label class="labelCB"><input type="checkbox" class="CB"/>${SECTIONS[i]}</label>`
 };
-
