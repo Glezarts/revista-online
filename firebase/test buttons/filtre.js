@@ -12,17 +12,17 @@ function toggleClasses(event){
       el.classList.remove('show')
     })
   }
-      
-    // Botó actiu
-    if(btn.classList.contains('active')){
-      btn.classList.remove('active');
-      
-      // borrar la secció de l'arrai
-      for(let i = 0; i < seccionsActives.length; i++){
-        if(seccionsActives[i] == btnName){
-          seccionsActives.splice(i, 1);
-        }
+  
+  // Botó actiu
+  if(btn.classList.contains('active')){
+    btn.classList.remove('active');
+    
+    // borrar la secció de l'arrai
+    for(let i = 0; i < seccionsActives.length; i++){
+      if(seccionsActives[i] == btnName){
+        seccionsActives.splice(i, 1);
       }
+    }
     
     // Botó inactiu
   }else{
@@ -35,18 +35,27 @@ function toggleClasses(event){
   // Mostrar tots els articles si cap botó està actiu
   if(seccionsActives.length === 0){
     document.querySelectorAll(".article").forEach((el) => {
-      el.classList.add('show')
+    el.classList.add('show2');
     })
   }else{
     document.querySelectorAll(".article").forEach((el) => {
-    if(el.classList.contains(seccionsActives)){
-      console.log(el);
-      el.classList.add('show');
-    }else{
-    el.classList.remove('show');
-    }
-  })
+    el.classList.remove('show2');
+    })
   }
+  
+    // Mostrar articles actius
+  document.querySelectorAll(".article").forEach((el) => {
+    let contains = false;
+    for(sec in seccionsActives){
+      console.log(sec)
+      if(el.classList.contains(seccionsActives[sec])){
+        contains = true;
+      }
+    }
+    if(contains == true) el.classList.add('show')
+    else el.classList.remove('show'); 
+    console.log(seccionsActives, contains)
+  })
 }
 
 
