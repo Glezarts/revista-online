@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test filtre</title>
+  <link rel="stylesheet" href="filtre.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+<body>
+  <h1>Filtre</h1>
+
+  <h2>selecciona el filtre</h2>
+
+  <div class="contenidor">
+    <p><span class="italic">Trieu les categories</span> </p>
+    <div id="contCB"></div>
+    <button id="filtrar" onclick="filtrarArticles()">Filtrar</button>
+  </div>
+
+  <div id="app">
+    <div class="flex">
+      <article-vue v-if="fetchDone"  v-for="(el, key) of articles" v-bind:key="key" v-bind:id="key"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
+    </div>
+  </div>
+  
+  
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+  <script src="checkbox.js"></script>
+  <!-- <script src="filtre.js"></script> -->
+  <script src="filtreCopy.js"></script>
+  
+  <script type="text/x-template" id="templateArticleImg">
+    <div class= "article show"> 
+      <h2 class='titol'> {{titol}} </h2> 
+      <h4 class='subtitol'> {{subtitol}}</h4> 
+      <p class='autor'>{{autor}}</p> 
+      <img width="600px" v-bind:src="img">  
+      <p class='contigut'><span v-html="contingut"></span></p>
+    </div>
+  </script>
+</body>
+</html>
