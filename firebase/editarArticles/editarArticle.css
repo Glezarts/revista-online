@@ -1,8 +1,26 @@
 body{
-  margin: 50px;
+  margin: 0px;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  background-color: rgb(22, 22, 22);
   color: rgb(0, 0, 0);
-  background-color: rgb(218, 218, 218);
+  background-color: #08103E;
+}
+.cab-fondo {
+  background-color: #08103E;
+  height: 150px;
+}
+.brand img{
+  position: absolute;
+  top: -50px;
+  left: 40vw;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:auto;
+  background-color:rgb(211, 211, 211);
+  padding: 20px 50px;
+  width: 1000px;
 }
 h1 {
   text-align: center;
@@ -12,8 +30,7 @@ h1 {
   padding: 30px;
   width:90%;
   height: auto;
-  margin:10px;margin: auto;
-  border-radius: 20px;
+  margin:40px auto;
 }
 .flex{
   display: flex;

@@ -9,29 +9,34 @@
   <link rel="stylesheet" href="editarArticle.css">
 </head>
 <body>
-  <h1>Edita els articles</h1>
-  <div id="app">
-    <div class="flex">
-      <article-vue v-if="fetchDone" v-for="(el, key) of articles" v-bind:key="key" v-bind:id="key"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
-    </div>
+  <div class="cab-fondo">      
+    <a class= "brand" href="./index2.html"><img src="./blanco.png" width="300px" alt=""></a>
   </div>
-  
-  
-  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
-  <script src="editarArticle-get.js"></script>
-  <script type="text/x-template" id="templateArticleImg">
-    <div class= "article"> 
-      <h2 class='titol contEd'> {{titol}} </h2> 
-      <h4 class='subtitol contEd'> {{subtitol}}</h4> 
-      <p class='autor contEd'>{{autor}}</p> 
-      <img width="600px" v-bind:src="img">  
-      <p class='contingut contEd'><span v-html="contingut"></span> </p>
-      <button class="edit" @click='editArticle'>Edit</button>
-      <button class="delete" @click='deleteArticle'>Delete</button>
+  <div class="content">
+    <h1>Edita els articles</h1>
+    <div id="app">
+      <div class="flex">
+        <article-vue v-if="fetchDone" v-for="(el, key) of articles" v-bind:key="key" v-bind:id="key"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
+      </div>
     </div>
-  </script>
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+    <script src="editarArticle-get.js"></script>
+    <script type="text/x-template" id="templateArticleImg">
+      <div class= "article">
+        <h2 class='titol contEd'> {{titol}} </h2>
+        <h4 class='subtitol contEd'> {{subtitol}}</h4>
+        <p class='autor contEd'>{{autor}}</p>
+        <img width="600px" v-bind:src="img">
+        <p class='contingut contEd'><span v-html="contingut"></span> </p>
+        <button class="edit" @click='editArticle'>Edit</button>
+        <button class="delete" @click='deleteArticle'>Delete</button>
+      </div>
+    </script>
+  </div>
 </body>
 </html>
 
