@@ -12,13 +12,15 @@
         *{
             margin: 0;
         }
+        
             #splash-page{
             margin: 0;
             overflow: hidden;
             transition: 0.9s;
             width: 100%;
             height: 100vh;
-            
+             
+                      
         }
         .title-splashpage{
             color:aliceblue;
@@ -27,22 +29,17 @@
             font-family: 'Kaushan Script', cursive;
             font-size:4em;
             font-weight: 100;
-            left:0;
-            right: 0;
             margin: auto;
 
         }
         .title-splashpage2{
             color:aliceblue;
             position: absolute;
-            bottom: 150px;
-            left:0;
-            right: 0;
-            bottom:200;
             margin:auto;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size:2em;
             font-weight: 100;
+            bottom: 150px;
         }
         #myCanvas{
             width: 100%;
@@ -75,16 +72,18 @@
             display: none;
         }
         .text{
+            width: 100%;
             display: flex;
-            margin: auto;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
+    
     <a href="" id="sound-on"><i class="fas fa-volume-up"></i></a>
     <a href="" id="sound-off"><i class="fas fa-volume-mute" ></i></a>
     <div id="splash-page">
-        <audio class="audio" autoplay controls>
+        <audio class="audio" controls>
             <source src="./audio/intro.mp3" type="audio/mp3"/>
             <source src="./audio/eurovision_intro.ogg" type="audio/ogg"/>
         </audio>
@@ -96,7 +95,7 @@
         <canvas id="myCanvas">
             
         </canvas>
-        <a href="" class = "swipe-up"><div class="scrollDown"></div></a>
+        <a href="/index2.html" class = "swipe-up"><div class="scrollDown"></div></a>
         
     </div>
     

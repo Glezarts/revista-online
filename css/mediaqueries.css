@@ -6,16 +6,26 @@
     #clock{
         margin: 50px auto;
     }
- 
-    .carousel__anterior {
-        left: -30px;
-    
+    .last_hour, .last_hour h2{
+        width: 140px;
+        padding-left: 10px;
     }
+    .last_post{
+        margin-left: 140px;
+    }
+    .article3d{
+        width: 100vw;
+    }
+    .article3d .titol{
+        bottom: 190px;
+    }
+    
+    
     .article {
        width:100vw;
    }
 
- .article .titol{
+ .article3d .titol{
      height: 50px;
      bottom:33vh;
  }
@@ -44,17 +54,18 @@
     justify-content: center;
     width: 100%;
 }
+.equipo{
+    flex-wrap:wrap;
+    margin-left: 0px;
+}
 
 }
     @media screen and (max-width: 800px) {
-        .article {
+        .article3d {
             width:100vw;
         }
      
-      .article .titol{
-          height: 70px;
-          bottom:13.5vh;
-      }
+
  
       .titol h3{
       font-size: 1em;
@@ -136,7 +147,6 @@
      
       .article .titol{
           height: 70px;
-          bottom:13.5vh;
       }
     
       .titol h3{
@@ -184,7 +194,7 @@
 
     .equipo{
         flex-wrap:wrap;
-        margin-left: -60px;
+        margin-left: 0px;
     }
     .pau{
         margin-bottom: 50px;

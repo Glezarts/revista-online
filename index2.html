@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
 </head>
+
 <body>
+    
     <script src="https://cdn.jsdelivr.net/npm/vue-carousel-3d@0.2.0/dist/vue-carousel-3d.min.js"></script>
 
     <div class="cab">
@@ -87,109 +89,111 @@
         </div>
     </div>
     <div class="index">
-        <!--CUENTRA ATRAS-->                
-        <div id="clock"></div>
-        
-        <div class="carousel-container">
-            <div id="carousel">
-                <carousel-3d :width="900" :height="450" controls-visible="true" :perspective="0" :space="300" >
-                    <slide v-for="(slide, i) in slides" :index="i">
-                        <div class="article3d">
-                            <a href=""><img v-bind:src="slide.mainSrc" :image-ratio="16/9" v-bind:class="{resize: slide.resize, resizeMed: slide.resizeMed}">
-                                <div class="titol">
-                                    <h3>{{slide.titol}}</h3>
-                                    <p class="subtitol">{{slide.subtitol}}</p>
+        <div class="background">
+            <!--CUENTRA ATRAS-->
+            <div id="clock"></div>
+            
+            <div class="carousel-container">
+                <div id="carousel">
+                    <carousel-3d :width="900" :height="450" controls-visible="true" :perspective="0" :space="300" >
+                        <slide v-for="(slide, i) in slides" :index="i">
+                            <div class="article3d">
+                                <a href=""><img v-bind:src="slide.mainSrc" :image-ratio="16/9" v-bind:class="{resize: slide.resize, resizeMed: slide.resizeMed}">
+                                    <div class="titol">
+                                        <h3>{{slide.titol}}</h3>
+                                        <p class="subtitol">{{slide.subtitol}}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </slide>
+                    </carousel-3d>
+                </div>
+            </div>
+            <div class="carouselowl-wrp">
+            
+                <h2>Altres articles</h2>
+                <div class="carouselowl">
+                    <div class="carouselowl_contenedor">
+                        <button aria-label="Anterior" class="carousel__anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+            
+                        <div class="carousel__lista">
+                            <a href="">
+                                <div class="carousel__elemento estilo-card ">
+                                    <img src="http://placehold.it/500x200" alt="Rock and Roll Hall of Fame">
+                                    <div class="info-tarjeta">
+                                        <p>Rock and Roll Hall of Fame</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="carousel__elemento estilo-card">
+                                    <img src="http://placehold.it/500x200" alt="Constitution Square - Tower I">
+                                    <div class="info-tarjeta">
+                                        <p>Rock and Roll Hall of Fame</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="carousel__elemento estilo-card">
+                                    <img src="http://placehold.it/500x200" alt="Empire State Building">
+                                    <div class="info-tarjeta">
+                                        <p>Rock and Roll Hall of Fame</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="carousel__elemento estilo-card">
+                                    <img src="http://placehold.it/500x200" alt="Harmony Tower">
+                                    <div class="info-tarjeta">
+                                        <p>Rock and Roll Hall of Fame</p>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a href="">
+                                <div class="carousel__elemento estilo-card">
+                                    <img src="http://placehold.it/500x200" alt="Empire State Building">
+                                    <div class="info-tarjeta">
+                                        <p>Rock and Roll Hall of Fame</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="carousel__elemento estilo-card">
+                                    <img src="http://placehold.it/500x200" alt="Harmony Tower">
+                                    <div class="info-tarjeta">
+                                        <p>Rock and Roll Hall of Fame</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="carousel__elemento estilo-card">
+                                    <img src="http://placehold.it/500x200" alt="Empire State Building">
+                                    <div class="info-tarjeta">
+                                        <p>Rock and Roll Hall of Fame</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="carousel__elemento estilo-card">
+                                    <img src="http://placehold.it/500x200" alt="Harmony Tower">
+                                    <div class="info-tarjeta">
+                                        <p>Rock and Roll Hall of Fame</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
-                    </slide>
-                </carousel-3d>
+            
+                        <button aria-label="Siguiente" class="carousel__siguiente">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+            
+                </div>
             </div>
         </div>
-        <div class="carouselowl-wrp">
-            
-            <h2>Altres articles</h2>
-            <div class="carouselowl">
-                <div class="carouselowl_contenedor">
-                    <button aria-label="Anterior" class="carousel__anterior">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    
-                    <div class="carousel__lista">
-                        <a href="">
-                            <div class="carousel__elemento estilo-card ">
-                                <img src="http://placehold.it/500x200" alt="Rock and Roll Hall of Fame">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Constitution Square - Tower I">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Empire State Building">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Harmony Tower">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Empire State Building">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Harmony Tower">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Empire State Building">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="carousel__elemento estilo-card">
-                                <img src="http://placehold.it/500x200" alt="Harmony Tower">
-                                <div class="info-tarjeta">
-                                    <p>Rock and Roll Hall of Fame</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <button aria-label="Siguiente" class="carousel__siguiente">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-                
-            </div>
-        </div>     
         
         <div class="contenedor-articulo">
             <div id="app">
@@ -228,16 +232,7 @@
                     </div>
                 </div>
             </div>
-                
-            <div class="calendar">
-                <div class="titol-calendari">
-                    <h2> CALENDARI D'ESDEVENIMENTS EUROVISIÓ</h2>
-                </div>
-                <div class="iframe-calendari">
-                    <iframe src="https://eurovisionworld.com/eurovision/calendar" style="border:none;" title="Iframe Example"></iframe>
-                </div>
-
-            </div>   
+           
           
             
            

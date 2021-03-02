@@ -89,7 +89,7 @@ font-size: 17px;
 transition: 0.5s;
 border-right:1px solid #c1c1c1;
 max-width: 100%;
-width: 200px;
+width: 18vw;
 }
 .topnav a:nth-child(1){
     border-left:1px solid #c1c1c1;
@@ -146,7 +146,6 @@ width: 100vw;}
     .topnav.responsive {
       position: relative;}
     .topnav a{
-      width:130px;
 
     }
     .topnav.responsive .icon {
@@ -169,7 +168,6 @@ width: 100vw;}
         
         }
         .topnav a{
-          max-width:100%;
       }
         .topnav.responsive a {
           float: none;

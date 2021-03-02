@@ -20,8 +20,11 @@
 
  #form{
      display: flex;
-     justify-content: space-evenly;
+     justify-content: center;
      margin: auto;
+     background-color: white;
+     padding-top: 50px;
+     padding-bottom: 50px;
  }
  #form h1{
     font-weight: 700;
@@ -32,7 +35,7 @@
  }
 .formulari{
     padding: 50px;
-    background-color: #d1d1d1;
+    background-color: #f1f1f1;
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.125);
     border-radius: 2px;
     width: 600px;

@@ -12,14 +12,16 @@ margin: 0px 60px;
 .article-entrevistas{
 width: 900px;
 }
-
+.subtitol-article{
+    margin: 10px 0px 20px 0px;
+}
 
 .article-entrevistas p{
 margin: 20px 0px;
 line-height: 25px;
 }
 .pageentrevistas  iframe{
-    width: 900;
+    width: 900px;
     height: 400px;
     margin:0;
 }

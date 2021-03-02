@@ -40,6 +40,7 @@
 	color: rgb(12, 12, 12);
 	opacity: 50%;
     font-size: 2.3rem;
+	
 }
 
 .carousel__anterior:hover,
@@ -73,17 +74,16 @@
 	display: block;
 	width: 20px;
 	height: 30px;
-	background: rgb(151, 151, 151);
 	opacity: .2;
 	border-radius: 0;
 }
 
 .carousel__indicadores .glider-dot:hover {
-	opacity: .5;
+	opacity: .0;
 }
 
 .carousel__indicadores .glider-dot.active {
-	opacity: 1;
+	opacity: 0;
 }
 .info-tarjeta{
     background-color: #08103E;

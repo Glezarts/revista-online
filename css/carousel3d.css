@@ -5,10 +5,11 @@
   height: 100%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: auto;
+
 }
 .article3d{
 height: 450px;
-  width: 900px;
+  width:100%;
   background-color: #F2F2F5;
   display: inline-block;
   position: absolute;
@@ -19,7 +20,7 @@ height: 450px;
     width: 100%;
     height: 100px;
     z-index: 1;
-    bottom:0;
+    bottom:0px;
 }
 
 .titol h3{
@@ -37,9 +38,7 @@ height: 450px;
     font-size: 1.2em;
     margin-top:0px;
 }
-.titol:hover{
-    
-}
+
 .carousel-3d-slide {
   border: none !important;
   background: none !important;

@@ -25,11 +25,7 @@ var resposta = new Vue({
         messageVisible:false,
     },
     methods: {
-        enviar: function(){
-            this.nom = this.temp_nom;
-            this.correu = this.temp_email;
-            this.tlf = this.temp_tlf;
-        },
+     
         checkNom: function() {      // funcions per validar els diferents camps del formulari
             this.nomVisible = true;
             var exp = /([A-Za-zÀ-ÖØ-öø-ÿ\s]{3,16})*[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/; 
@@ -65,6 +61,7 @@ var resposta = new Vue({
         },
         checkTlf: function(){
             this.tlfVisible = true;
+            var exp=/^[\d]{3}[-]*([\d]{2}[-]*){2}[\d]{2}$/;
             var telefono =  document.querySelector("#telefon");
             if(exp.test(this.temp_tlf)){
                 this.tlfCorrect = true;
@@ -86,6 +83,19 @@ var resposta = new Vue({
                 message.style.border= "1px solid red";
             };
         }
-    }
+    },
+    enviar: function(){
+        this.nom = this.temp_nom;
+        this.correu = this.temp_email;
+        this.tlf = this.temp_tlf;
+        this.miss = this.tem_message;
+if((nom.length == 0) && (correu.length == 0) && (miss.length == 0)) {
+  alert('Si us plau, escriu algu al formulari');
+  return;
+}
+
+}
 
 });
+
+ var boton_formmulari=document.querySelector('.submit');
