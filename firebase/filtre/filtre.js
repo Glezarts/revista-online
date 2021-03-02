@@ -5,7 +5,6 @@ function toggleClasses(event){
   let btn = event.target.closest('button');
   let btnName = btn.innerText;
   
- 
   // Afegeix les classes una vegada i amaga tots els articles
   if(senseClasses == true){
     afegirClasses();
@@ -13,25 +12,17 @@ function toggleClasses(event){
       el.classList.remove('show')
     })
   }
-      
-    // Botó actiu
-    if(btn.classList.contains('active')){
-      btn.classList.remove('active');
-      
-      // borrar la secció de l'arrai
-      for(let i = 0; i < seccionsActives.length; i++){
-        if(seccionsActives[i] == btnName){
-          seccionsActives.splice(i, 1);
-        }
-      }
-      
-      // Amagar els articles
-      document.querySelectorAll(".article").forEach((el) => {
-        if(el.classList.contains(btnName)){  //  i no està en l'arrai de actius
-        el.classList.remove('show')
-      }
-    })
+  
+  // Botó actiu
+  if(btn.classList.contains('active')){
+    btn.classList.remove('active');
     
+    // borrar la secció de l'arrai
+    for(let i = 0; i < seccionsActives.length; i++){
+      if(seccionsActives[i] == btnName){
+        seccionsActives.splice(i, 1);
+      }
+    }
     
     // Botó inactiu
   }else{
@@ -39,56 +30,33 @@ function toggleClasses(event){
     
     // afegir la secció de l'arrai
     seccionsActives.push(btnName);
-    
-    // Ensenyar els articles
-    document.querySelectorAll(".article").forEach((el) => {
-      if(el.classList.contains(btnName)){
-        el.classList.add('show')
-      }
-    })
   }
   
   // Mostrar tots els articles si cap botó està actiu
   if(seccionsActives.length === 0){
     document.querySelectorAll(".article").forEach((el) => {
-      el.classList.add('show')
+    el.classList.add('show2');
     })
   }else{
     document.querySelectorAll(".article").forEach((el) => {
-    if(el.classList.contains(seccionsActives)){
-      el.classList.add('show');
-    }else{
-    el.classList.remove('show');
+    el.classList.remove('show2');
+    })
+  }
+  
+    // Mostrar articles actius
+  document.querySelectorAll(".article").forEach((el) => {
+    let contains = false;
+    for(sec in seccionsActives){
+      console.log(sec)
+      if(el.classList.contains(seccionsActives[sec])){
+        contains = true;
+      }
     }
+    if(contains == true) el.classList.add('show')
+    else el.classList.remove('show'); 
+    console.log(seccionsActives, contains)
   })
-  }
 }
-
-
-
-
-// Seleccionar els CB
-
-let cb = document.querySelectorAll(".CB");
-for (var checkbox of cb) {  
-  if (checkbox.checked){  
-    sec.push(checkbox.closest("label").innerText);
-  }  
-}
-
-
-document.querySelectorAll('.article').forEach((el) => {
-  for(classes of el.classList){
-    if(sec.includes(classes)){
-      
-    }
-  }
-});
-
-
-// amagar o ensenyar
-
-
 
 // VUE component
 Vue.component("article-vue",{
