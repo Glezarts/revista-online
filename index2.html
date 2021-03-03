@@ -195,27 +195,7 @@
             </div>
         </div>
         
-        <div class="contenedor-articulo">
-            <div id="app">
-              <div class="flex">
-                <article-vue v-if="fetchDone" v-for="el of articles" v-bind:key="el.id"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
-              </div>
-            </div>
-          
-            <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
-            <script src="./firebase/getArticles/getArticle.js"></script>
-            <script type="text/x-template" id="templateArticleImg">
-              <div class= "article article-general"> 
-                <h2 class='titol titol-article'> {{titol}} </h2> 
-                <h4 class='subtitol subtitol-article'> {{subtitol}}</h4> 
-                <p class='autor'>{{autor}}</p> 
-                <img width="600px" v-bind:src="img">  
-                <p class='contigut'><span v-html="contingut"></span></p>
-              </div>
-            </script>
-        </div>
+      
        
 
             <div class="mockup">
@@ -232,7 +212,16 @@
                     </div>
                 </div>
             </div>
-           
+            <div class="spotify">
+                <div class="text-spotify">
+                    <h2>Escolta totes las cançons de Eurovisió 2021</h2>
+
+                </div>
+                <div class="widget">
+                    <iframe src="https://open.spotify.com/embed/playlist/76WyCR0yYuIKy7Y6Ikn7x7" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                    </div>
+
+                </div>
+            </div>
           
             
            
@@ -305,21 +294,38 @@
                         </ul>
                     </li>
                 </ul>
+
             </div>
             <div class="pageactualitat">
                 <div class="cont-actualitat">
-                    <div id="app">
-                        <div class="flex">
-                          <article-vue v-if="fetchDone" v-for="el of articles" v-bind:key="el.id"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
+                    <div class="contenedor-articulo">
+                        <div id="app">
+                          <div class="flex">
+                            <article-vue v-if="fetchDone" v-for="el of articles" v-bind:key="el.id"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
+                          </div>
                         </div>
-                    </div>
                       
-               
-     
+                        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+                        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+                        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+                        <script src="./firebase/getArticles/getArticle.js"></script>
+                        <script type="text/x-template" id="templateArticleImg">
+                          <div class= "article article-general"> 
+                            <h2 class='titol titol-article'> {{titol}} </h2> 
+                            <h4 class='subtitol subtitol-article'> {{subtitol}}</h4> 
+                            <p class='autor'>{{autor}}</p> 
+                            <img width="600px" v-bind:src="img">  
+                            <p class='contigut'><span v-html="contingut"></span></p>
+                          
+                        </script>
+                    </div>
                     <aside>
                         
                         <a class="twitter-timeline" href="https://twitter.com/leurovisiu" data-widget-id="302069386464870402">Tweets por @leurovisiu</a>
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <div class="widget">
+                        <iframe src="https://open.spotify.com/embed/playlist/76WyCR0yYuIKy7Y6Ikn7x7" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                    </div>
+        
                         
                     </aside>
                 </div>    
@@ -329,8 +335,8 @@
                 <div class="cont-entrevistas">
                     <div class="cont-principal-entrevistas">
                         <div class="article-entrevistas">
-                            <h2 class="titol-article">L'Eurovisiu parla amb... The Mamas! </h2>
-                            <h3 class ="subtitol-article">Entrevistem a les candidats de Suecia</h3>
+                            <h2 class="entrevistas titol-article">L'Eurovisiu parla amb... The Mamas! </h2>
+                            <h3 class ="entrevistas subtitol-article">Entrevistem a les candidats de Suecia</h3>
                             <iframe class="iframe_uno" src="https://www.youtube.com/embed/Ed2ZhITqKJc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <p>Hej Sverige! Des de l’Eurovisiu hem parlat amb The Mamas, representants de Suècia al Festival d’Eurovisió 2020, que tornen per tercer any consecutiu al Melodifestivalen. El grup participarà dissabte 27 de febrer a la Quarta Semifinal amb “In The Middle”, i intentaran revalidar el seu títol per poder, aquest cop sí, representar el país nòrdic a Rotterdam.</p>
                             <p>The Mamas es van donar a conèixer com a vocalistes de John Lundvik al Melodifestivalen 2019 i posteriorment a Eurovisió aquell mateix any. L’any passat van decidir donar el salt com a grup en solitari, i van arrasar al Melfest amb “Move”. La cancel·lació del Festival d’Eurovisió degut a la pandèmia va fer que no puguessin actuar al certamen, i és per això que aquest any tornen amb més ganes que mai.</p>
@@ -343,7 +349,7 @@
                         </div>
 
                         <div class="otras-entrevistas">
-                            <h3>Més videos aquí</h3>
+                            <h3>Si vols veure més...</h3>
                             <div class="videos">
                                 <iframe  src="https://www.youtube.com/embed/6_rzYgYQIgY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -368,21 +374,22 @@
                 <div class="cont-contacte">
                     <div class="presentacion">
                         <h2>Qui som?</h2>
-                        <p>L'Eurovisiu nace en 2020 como proyecto universitario de dos estudiantes de Periodismo de la Universitat Pompeu Fabra, Barcelona. Comienza con la idea y necesidad de cubrir la información de entretenimiento musical sobre el famoso <i>Festival de la Canción</i></p>
-                        <p>Somos el primer medio especializado en información del festival d'Eurovisió específicamente en catalá, con la finalidad de dirigirnos a nuestro público más cercano y despertar el interés por el 4º arte.</p>
+                        <p>L'Eurovisiu neix el 2020 com a projecte universitari de dos estudiants de Periodisme de la Universitat Pompeu Fabra, Barcelona. Comença amb la idea i necessitat de cobrir la informació d'entreteniment musical sobre el famós 
+                         <i>Festival de la Canço</i></p>
+                        <p>   Som el primer mitjà especialitzat en informació de festival d'Eurovisió específicament en català, amb la finalitat de dirigir al nostre públic més proper i despertar l'interès pel 4t art.</p>
                         <p></p>
                         <div class="equipo">
                             <div class="pau">
                                 <img src="./img/team/PauWokan.jpg" alt="">
                                 <h3>Pau Requena</h3>
                                 <div class="linea"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sequi iure totam eaque minima id iste labore quaerat? Magni aperiam deserunt non est quasi dolor commodi excepturi adipisci debitis, quia nobis, deleniti ut rem numquam incidunt ea minus placeat molestiae esse minima totam animi ipsa? Corrupti quibusdam nemo dolorem corporis?</p>
+                                <p>Periodista i estudiant de Ciències Polítiques, el seu primer record eurovisiu és el de la segona posició de les Buranovskiye Babushki de Rússia al Festival de 2012. Actualment, però, està especialitzat en els països mediterranis i seleccions com la francesa, el Festival da Canção o el Festival di Sanremo. Com molts dels eurofans catalans espera ansiosament el retorn d’Andorra al festival i el cor li fa un tomb cada cop que sent la mítica cançó “Jugarem a Estimar-nos”.</p>
                             </div>
                             <div class="imanol">
-                                <img src="./img/team/PauWokan.jpg" alt="">
+                                <img src="./img/team/template.jpg" alt="">
                                 <h3>Imanol</h3>
                                 <div class="linea"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sequi iure totam eaque minima id iste labore quaerat? Magni aperiam deserunt non est quasi dolor commodi excepturi adipisci debitis, quia nobis, deleniti ut rem numquam incidunt ea minus placeat molestiae esse minima totam animi ipsa? Corrupti quibusdam nemo dolorem corporis?</p>
+                                <p>Estudiant de Periodisme i Ciències Polítiques, Eurovisió és des de 2016 quasi un estil de vida i una afició que li permet combinar gran part de les seves passions: la música, la geopolítica i les relacions internacionals i la seva curiositat per descobrir noves cultures, artistes i països. La seva predilecció per la música pop l’ha convertit en un seguidor incondicional de les preseleccions nòrdiques i, especialment, del Melodifestivalen, encara que des de les actuacions de Ivi Adamou, Eleni Foureira i Tamta, un dels seus ulls sempre mira a Xipre i Grècia, d’on provenen algunes de les seves cançons preferides del festival. Com tot bon seguidor català del festival, un dels seus grans somnis és que el festival se celebri algun dia a Barcelona.</p>
                             </div>
                         </div>
                     </div>

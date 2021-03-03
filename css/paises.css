@@ -65,3 +65,11 @@
     color: #737479;
 
 }
+
+@media screen and (max-width: 600px) {
+    .paisos{
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+}

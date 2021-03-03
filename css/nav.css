@@ -130,7 +130,8 @@ width: 100vw;}
     width: 600px;
 }
 .topnav.responsive .icon {
-  position: absolute;
+  position: sticky;
+  top:0px;
 
 }
 .topnav.responsive a {
@@ -149,7 +150,8 @@ width: 100vw;}
 
     }
     .topnav.responsive .icon {
-      position: absolute;
+      position: sticky;
+      top:0px;
     
     }
     .topnav.responsive a {
