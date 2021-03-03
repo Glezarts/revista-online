@@ -14,8 +14,8 @@ function toggleClasses(event){
   }
   
   // Botó actiu
-  if(btn.classList.contains('active')){
-    btn.classList.remove('active');
+  if(btn.classList.contains('btnActiu')){
+    btn.classList.remove('btnActiu');
     
     // borrar la secció de l'arrai
     for(let i = 0; i < seccionsActives.length; i++){
@@ -26,7 +26,7 @@ function toggleClasses(event){
     
     // Botó inactiu
   }else{
-    btn.classList.add('active');
+    btn.classList.add('btnActiu');
     
     // afegir la secció de l'arrai
     seccionsActives.push(btnName);

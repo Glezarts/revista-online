@@ -82,7 +82,7 @@ textarea{
     line-height: 25px;
 }
 
-button{
+.button{
     border: none;
     outline: none;
     background: linear-gradient(114deg, rgba(8,16,62,1) 0%, rgba(8,16,62,1) 31%, rgb(15, 60, 85) 100%);
@@ -90,7 +90,7 @@ button{
     padding: 10px 20px;
     transition: 0.5s;
 }
-button:hover{
+.button:hover{
     background: white;
     color: rgba(8,16,62,1);
 }

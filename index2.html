@@ -28,6 +28,7 @@
 <body>
     
     <script src="https://cdn.jsdelivr.net/npm/vue-carousel-3d@0.2.0/dist/vue-carousel-3d.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 
     <div class="cab">
         <div class="cab-fondo"><!--<img src="./img/fondo-def.jpg" alt="">--></div>
@@ -297,26 +298,32 @@
 
             </div>
             <div class="pageactualitat">
+                <div class="contenidor-secciones">
+                    <p><span class="italic">Trieu les categories</span> </p>
+                    <div id="contCB2"></div> 
+                </div>
                 <div class="cont-actualitat">
                     <div class="contenedor-articulo">
                         <div id="app">
-                          <div class="flex">
-                            <article-vue v-if="fetchDone" v-for="el of articles" v-bind:key="el.id"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
-                          </div>
+                            <div class="flex">
+                                <article-vue v-if="fetchDone"  v-for="(el, key) of articles" v-bind:key="key" v-bind:id="key"  v-bind:titol="el.titol" v-bind:subtitol="el.subtitol" v-bind:autor="el.autor"  v-bind:img="el.imatge" v-bind:contingut="el.contingut"></article-vue>
+                            </div>
                         </div>
-                      
+                        
                         <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
                         <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
                         <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
-                        <script src="./firebase/getArticles/getArticle.js"></script>
+
+                        <script src="./firebase/filtre/checkboxFiltre.js"></script>
+                        <script src="./firebase/filtre/filtre.js"></script>
+                        <!-- <script src="./firebase/getArticles/getArticle.js"></script> -->
                         <script type="text/x-template" id="templateArticleImg">
-                          <div class= "article article-general"> 
-                            <h2 class='titol titol-article'> {{titol}} </h2> 
-                            <h4 class='subtitol subtitol-article'> {{subtitol}}</h4> 
-                            <p class='autor'>{{autor}}</p> 
-                            <img width="600px" v-bind:src="img">  
-                            <p class='contigut'><span v-html="contingut"></span></p>
-                          
+                            <div class= "article article-general show"> 
+                                <h2 class='titol titol-article'> {{titol}} </h2> 
+                                <h4 class='subtitol subtitol-article'> {{subtitol}}</h4> 
+                                <p class='autor'>{{autor}}</p> 
+                                <img width="600px" v-bind:src="img">  
+                                <p class='contigut'><span v-html="contingut"></span></p>
                         </script>
                     </div>
                     <aside>
@@ -428,7 +435,7 @@
                                 <i v-else style="color:rgb(212, 0, 0);" class="fas fa-exclamation-circle"></i>
                             </span><br><br>
                             
-                            <button v-on:click='enviar'>Enviar</button><br><br>
+                            <button v-on:click='enviar' class="button">Enviar</button><br><br>
                         </div>
                     </div>
                 </div>

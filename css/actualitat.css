@@ -7,6 +7,20 @@
     margin: 0px 60px;
 }
 
+.contenidor-secciones{
+    max-width: 1000px;
+    margin:0px auto;
+    background-color: white;
+    padding: 50px ;
+    width: 100%;
+}
+
+#contCB2{
+display: flex;
+justify-content: center;
+
+}
+
 
 .titol-article{
     font-size: 3em;
@@ -69,4 +83,21 @@ aside .widget{
 .flex{
     display: flex;
     flex-direction: column-reverse;
+}
+
+.article{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.show2{
+display: block;
+}
+
+.btnActiu{
+    background-color: white;
+    color: black;
 }
